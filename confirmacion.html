@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barberia Harry Estilos - Cita agendada</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ir al inicio">
+      <img class="brand-icon" src="img/scissors-mark.svg" alt="">
+      <span><strong>Barberia</strong> Harry Estilos</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Navegacion principal">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="modal-container">
+    <section class="modal-box" aria-labelledby="confirm-title">
+      <div class="success-mark" aria-hidden="true">✓</div>
+      <p class="eyebrow">Reserva confirmada</p>
+      <h1 id="confirm-title">Su cita ha sido agendada con exito</h1>
+      <div class="confirmation-details" id="confirmationDetails">
+        <p>Te esperamos en Barberia Harry Estilos.</p>
+      </div>
+      <div class="hero-actions centered">
+        <a href="agendamiento.html" class="btn-secondary">Nueva reserva</a>
+        <a href="index.html" class="btn-primary">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Barberia Harry Estilos © 2026. Proyecto formativo SENA.</p>
+  </footer>
+</body>
+</html>

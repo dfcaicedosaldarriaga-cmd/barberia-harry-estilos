@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barberia Harry Estilos - Reserva tu cita</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ir al inicio">
+      <img class="brand-icon" src="img/scissors-mark.svg" alt="">
+      <span><strong>Barberia</strong> Harry Estilos</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Navegacion principal">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title compact">
+      <p class="eyebrow">Agendamiento</p>
+      <h1>Reserva tu cita</h1>
+      <p>Completa los datos y revisa el resumen antes de confirmar.</p>
+    </section>
+
+    <form class="booking-layout" id="bookingForm" novalidate>
+      <section class="form-panel" aria-label="Datos de la reserva">
+        <div class="form-group">
+          <label for="cliente">Nombre del cliente</label>
+          <input id="cliente" name="cliente" class="form-control" type="text" placeholder="Ej. Hernan Salazar" required>
+        </div>
+
+        <div class="form-group">
+          <label for="barbero">1. Selecciona barbero</label>
+          <select id="barbero" name="barbero" class="form-control" required>
+            <option value="">Selecciona una opcion</option>
+            <option value="Harry">Harry</option>
+            <option value="Andres">Andres</option>
+            <option value="Camilo">Camilo</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>2. Elegir servicio</legend>
+          <div class="service-options">
+            <label class="option-card">
+              <input type="radio" name="servicio" value="corte" required>
+              <span>Corte Clasico</span>
+              <strong>$25.000</strong>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="servicio" value="barba" required>
+              <span>Barba</span>
+              <strong>$14.000</strong>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="servicio" value="paquete" required>
+              <span>Paquete Completo</span>
+              <strong>$35.000</strong>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">3. Fecha</label>
+            <input id="fecha" name="fecha" class="form-control" type="date" required>
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input id="hora" name="hora" class="form-control" type="time" min="09:00" max="19:00" required>
+          </div>
+        </div>
+
+        <p class="form-message" id="formMessage" role="alert" aria-live="polite"></p>
+      </section>
+
+      <aside class="summary-card" aria-label="Resumen de reserva">
+        <h2>Resumen de reserva</h2>
+        <div class="summary-line"><span>Cliente</span><strong data-summary="cliente">Pendiente</strong></div>
+        <div class="summary-line"><span>Servicio</span><strong data-summary="servicio">Pendiente</strong></div>
+        <div class="summary-line"><span>Barbero</span><strong data-summary="barbero">Pendiente</strong></div>
+        <div class="summary-line"><span>Fecha</span><strong data-summary="fecha">Pendiente</strong></div>
+        <div class="summary-line"><span>Hora</span><strong data-summary="hora">Pendiente</strong></div>
+        <div class="summary-line"><span>Duracion</span><strong data-summary="duracion">0 min</strong></div>
+        <div class="summary-total"><span>Total</span><strong data-summary="total">$0 COP</strong></div>
+        <button class="btn-confirm" type="submit">Confirmar reserva</button>
+      </aside>
+    </form>
+  </main>
+
+  <footer>
+    <p>Barberia Harry Estilos © 2026. Proyecto formativo SENA.</p>
+  </footer>
+</body>
+</html>
