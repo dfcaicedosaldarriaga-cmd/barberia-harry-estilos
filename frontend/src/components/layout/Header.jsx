@@ -16,9 +16,12 @@ export default function Header() {
         <span><strong>Harry</strong> Estilos</span>
       </a>
       <nav aria-label="Navegación principal del módulo">
-        <a href="#servicios">Servicios</a>
-        <a href="#agendamiento">Agendamiento</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios-destacados">Servicios</a>
+        <a href="#agendamiento">Agendar cita</a>
         <a href="#mis-citas">Mis citas</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </header>
   );

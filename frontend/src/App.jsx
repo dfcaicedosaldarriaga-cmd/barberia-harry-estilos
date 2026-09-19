@@ -106,19 +106,74 @@ export default function App() {
     <div className="app-shell" id="inicio">
       <Header />
       <main>
-        <section className="hero" aria-labelledby="hero-title">
-          <p className="eyebrow">Gestión de citas</p>
-          <h1 id="hero-title">Agenda tu próximo estilo</h1>
-          <p>Selecciona tu servicio, barbero y horario desde un único módulo.</p>
+        {/* SECCIÓN 1: HERO PRINCIPAL */}
+        <section className="hero-section" aria-labelledby="hero-title">
+          <div className="hero-copy">
+            <p className="eyebrow">Clásicos y modernos</p>
+            <h1 id="hero-title">Estilo y precisión para el hombre actual</h1>
+            <p>
+              Agenda tu turno en la <strong>Barbería Harry Estilos</strong>, elige el servicio que necesitas,
+              selecciona tu barbero de confianza y confirma tu reserva en tiempo real.
+            </p>
+            <div className="hero-actions">
+              <a className="button button--primary" href="#agendamiento">Pide tu cita</a>
+              <a className="button button--secondary" href="#servicios-destacados">Ver catálogo</a>
+            </div>
+          </div>
+          <div className="hero-visual" aria-label="Identidad visual de Barbería Harry Estilos">
+            <div className="barber-pole" aria-hidden="true"></div>
+            <div className="hero-badge">
+              <strong>Harry Estilos</strong>
+              <span>Cortes, barba y paquetes profesionales</span>
+            </div>
+          </div>
         </section>
 
-        <section className="content-section" id="servicios" aria-labelledby="booking-title">
+        {/* SECCIÓN 2: CATÁLOGO DE SERVICIOS DESTACADOS */}
+        <section className="content-section" id="servicios-destacados" aria-labelledby="servicios-title">
           <div className="section-heading">
-            <p className="eyebrow">Módulo front-end</p>
-            <h2 id="booking-title">Reserva de cita</h2>
+            <p className="eyebrow">Catálogo oficial</p>
+            <h2 id="servicios-title">Servicios destacados</h2>
+            <p className="section-subtitle">Conoce nuestras tarifas y tiempos estimados para cada atención.</p>
+          </div>
+          <div className="featured-services-grid">
+            {SERVICES.map((service) => (
+              <article className="featured-card" key={service.id}>
+                <div className="featured-card__icon" aria-hidden="true">
+                  {service.id === "corte-clasico" && "✂️"}
+                  {service.id === "barba" && "💈"}
+                  {service.id === "paquete-completo" && "⭐"}
+                </div>
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+                <div className="featured-card__meta">
+                  <strong>${service.price.toLocaleString("es-CO")} COP</strong>
+                  <small>⏱️ {service.duration} minutos</small>
+                </div>
+                <button
+                  type="button"
+                  className="button button--primary button--full"
+                  onClick={() => {
+                    handleServiceSelect(service.id);
+                    document.getElementById("agendamiento")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Agendar este servicio
+                </button>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* SECCIÓN 3: MÓDULO REACT DE AGENDAMIENTO */}
+        <section className="content-section" id="agendamiento" aria-labelledby="booking-title">
+          <div className="section-heading">
+            <p className="eyebrow">Módulo Front-end interactivo</p>
+            <h2 id="booking-title">Reserva tu cita</h2>
+            <p className="section-subtitle">Diligencia los datos y confirma tu atención con cálculo inmediato de tiempos y valores.</p>
           </div>
           <Alert message={notice} type={Object.keys(errors).length ? "error" : "success"} />
-          <div className="booking-layout" id="agendamiento">
+          <div className="booking-layout">
             <BookingForm
               barbers={BARBERS}
               errors={errors}
@@ -132,15 +187,54 @@ export default function App() {
           </div>
         </section>
 
+        {/* SECCIÓN 4: MIS CITAS REGISTRADAS */}
         <section className="content-section" id="mis-citas" aria-labelledby="appointments-title">
           <div className="section-heading section-heading--inline">
             <div>
-              <p className="eyebrow">Consulta</p>
+              <p className="eyebrow">Consulta en memoria</p>
               <h2 id="appointments-title">Mis citas</h2>
             </div>
             <span className="counter">{activeAppointments.length} activas</span>
           </div>
           <AppointmentList appointments={appointments} barbers={BARBERS} onCancel={handleCancel} services={SERVICES} />
+        </section>
+
+        {/* SECCIÓN 5: NOSOTROS */}
+        <section className="content-section split-section" id="nosotros" aria-labelledby="nosotros-title">
+          <div className="split-section__content">
+            <p className="eyebrow">Nosotros</p>
+            <h2 id="nosotros-title">Atención cercana, resultado impecable</h2>
+            <p>
+              <strong>Barbería Harry Estilos</strong> es un proyecto concebido para clientes que buscan distinción,
+              técnicas de corte de vanguardia y una gestión de turnos transparente y moderna.
+            </p>
+            <p>
+              Este componente front-end fue desarrollado en <strong>React 19 con Vite</strong> para la evidencia formativa
+              <strong> GA7-220501096-AA4-EV03</strong>, integrando el flujo de reserva con los artefactos de análisis y
+              diseño validados en el programa ADSO del SENA.
+            </p>
+          </div>
+          <div className="split-section__aside">
+            <div className="stat-card">
+              <strong>+10 años</strong>
+              <span>Experiencia combinada de nuestros barberos</span>
+            </div>
+            <div className="stat-card">
+              <strong>100%</strong>
+              <span>Garantía de satisfacción y estilo</span>
+            </div>
+          </div>
+        </section>
+
+        {/* SECCIÓN 6: HORARIOS Y CONTACTO */}
+        <section className="contact-band" id="contacto" aria-labelledby="contacto-title">
+          <div className="contact-band__info">
+            <p className="eyebrow">Ubicación y atención</p>
+            <h2 id="contacto-title">Reserva tu espacio con anticipación</h2>
+            <p><strong>Horario de atención:</strong> Lunes a sábado de 9:00 a. m. a 7:00 p. m.</p>
+            <p><strong>Atención al cliente:</strong> Calle Principal · Sede Central Barbería Harry Estilos</p>
+          </div>
+          <a className="button button--primary" href="#agendamiento">Agendar ahora</a>
         </section>
       </main>
       <Footer />
