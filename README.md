@@ -47,4 +47,4 @@ Actualmente `src/services/appointmentService.js` simula las operaciones de guard
 
 ## Evidencia de versionamiento
 
-El proyecto fue inicializado como repositorio Git local y se configuró para el repositorio remoto `barber-system-aa4-ev03` de la cuenta del aprendiz. Cree ese repositorio en GitHub y publique la rama `main` antes de entregar. No se incluye `node_modules` ni la carpeta de compilación en el comprimido.
+El proyecto fue inicializado como repositorio Git local y se configuró para el repositorio remoto `Programa-Git` de la cuenta del aprendiz. No se incluye `node_modules` ni la carpeta de compilación en el comprimido.

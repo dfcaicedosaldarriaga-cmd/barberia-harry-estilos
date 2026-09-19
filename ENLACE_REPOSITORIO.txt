@@ -6,12 +6,11 @@ PERFIL GITHUB DEL APRENDIZ:
 https://github.com/dfcaicedosaldarriaga-cmd
 
 URL DESTINO DEL REPOSITORIO DEL PROYECTO:
-https://github.com/dfcaicedosaldarriaga-cmd/barber-system-aa4-ev03
+https://github.com/dfcaicedosaldarriaga-cmd/Programa-Git
 
 ESTADO:
-La URL de destino está configurada localmente. El aprendiz debe crear el repositorio
-con el nombre "barber-system-aa4-ev03" en su cuenta de GitHub y publicar la rama main.
-Después de publicarlo, esta será la URL válida para adjuntar a la evidencia.
+La URL del repositorio remoto está configurada localmente y corresponde al proyecto
+publicado por el aprendiz en GitHub.
 
-Comando final de publicación desde la carpeta del proyecto:
-git push -u origin main
+Para publicar los cambios de esta evidencia en el repositorio ejecute:
+git push origin main
