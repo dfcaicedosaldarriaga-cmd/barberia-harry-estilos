@@ -1,7 +1,21 @@
 import React from "react";
 import { formatCurrency, formatDate } from "../../utils/appointmentValidation";
 
+/**
+ * Componente AppointmentList - Visualizador y gestor de citas agendadas.
+ * Renderiza el listado histórico de citas, su estado actual (Confirmada / Cancelada)
+ * y expone la acción de cancelar cita para el usuario.
+ * 
+ * @component
+ * @param {Object} props
+ * @param {Array<Object>} props.appointments Colección de citas registradas.
+ * @param {Array<{id: string, name: string}>} props.barbers Lista de barberos.
+ * @param {Function} props.onCancel Función de devolución para cancelar una cita.
+ * @param {Array<Object>} props.services Catálogo de servicios.
+ * @returns {JSX.Element} Cuadrícula responsiva con las tarjetas de citas.
+ */
 export default function AppointmentList({ appointments, barbers, onCancel, services }) {
+  // Función auxiliar pura para recuperar el nombre del barbero a partir de su ID
   const findName = (collection, id) => collection.find((item) => item.id === id)?.name ?? "No disponible";
 
   return (

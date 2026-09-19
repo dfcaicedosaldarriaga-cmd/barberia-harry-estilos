@@ -1,54 +1,92 @@
-# Programa-Git
+# Barbería Harry Estilos — Módulo Front-end (GA7-220501096-AA4-EV03)
 
-Repositorio académico de **Diego Fernando Caicedo Saldarriaga**.
+Repositorio del proyecto formativo: [barberia-harry-estilos](https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos)  
+**Aprendiz:** Diego Fernando Caicedo Saldarriaga  
+**Programa:** Análisis y Desarrollo de Software (ADSO) — SENA  
+**Actividad:** GA7-220501096-AA4-EV03: Componente front-end del proyecto formativo y proyectos de clase  
 
-## Barber System - GA7-220501096-AA4-EV03
+---
 
-Módulo front-end de **agendamiento de citas** para una barbería. Se desarrolla como evidencia de la actividad **GA7-220501096-AA4-EV03: Componente front-end del proyecto formativo y proyectos de clase**.
+## 📌 Descripción del Módulo
 
-**Aprendiz:** Diego Fernando Caicedo Saldarriaga
+Este módulo constituye el **componente front-end reactivo de agendamiento de citas** para el sistema de información de la **Barbería Harry Estilos**. Ha sido diseñado e implementado con base en los artefactos del ciclo de software previos (diagramas de clases, historias de usuario, prototipos y plan de construcción), integrando estándares de accesibilidad web, modularidad y código documentado con JSDoc.
 
-### Funcionalidades
+### ✂️ Funcionalidades Implementadas
 
-- Selección visual y reutilizable de servicios.
-- Registro de citas con cliente, barbero, fecha y hora.
-- Validaciones de campos obligatorios y nombre del cliente.
-- Resumen dinámico de la reserva con precio y duración.
-- Consulta y cancelación de citas en memoria.
-- Diseño adaptable para escritorio y móvil.
+- **Catálogo interactivo de servicios:** Selección visual de servicios con descripción, tarifa en COP y duración estimada.
+- **Formulario de reserva reactivo:** Captura guiada de cliente, barbero y fecha/hora con validaciones en tiempo real.
+- **Resumen dinámico de la cita:** Cálculo instantáneo del costo total y tiempo del servicio conforme se interactúa con la interfaz.
+- **Gestión de citas:** Listado interactivo de reservas confirmadas y capacidad de cancelación con retroalimentación accesible (`role="status"`).
+- **Diseño responsivo:** Adaptado para dispositivos móviles, tabletas y computadores de escritorio.
 
-### Tecnologías
+---
 
-- React 19
-- JavaScript (ES modules)
-- CSS responsivo
-- Vite
-- Git para control de versiones
+## 🛠️ Tecnologías y Estándares
 
-### Estructura relevante
+- **React 19:** Biblioteca principal basada en componentes funcionales y Hooks (`useState`, `useMemo`).
+- **Vite:** Herramienta de compilación y empaquetado optimizada para desarrollo ágil.
+- **JavaScript Moderno (ES Modules):** Sintaxis limpia y modular.
+- **CSS3 Personalizado:** Estilos centralizados y responsivos sin dependencias pesadas.
+- **Estándares de Codificación:** Separación de capas, principios SOLID y documentación exhaustiva con **JSDoc**.
+- **Control de Versiones:** Git y GitHub como repositorio remoto oficial.
+
+---
+
+## 📂 Estructura del Código
 
 ```text
-src/
-  components/       Componentes reutilizables de interfaz
-  data/             Datos temporales de barberos, servicios y citas
-  services/         Capa preparada para integración con API
-  utils/            Validaciones y formato de datos
-  App.jsx           Orquestación del módulo de agendamiento
+frontend/
+├── docs/
+│   └── TRAZABILIDAD_EV03.md      # Matriz de trazabilidad con la guía SENA
+├── src/
+│   ├── components/
+│   │   ├── appointments/         # Visualización y cancelación de citas
+│   │   ├── booking/              # Formulario y resumen dinámico
+│   │   ├── common/               # Componentes genéricos accesibles (Alert)
+│   │   ├── layout/               # Header y Footer con identidad de marca
+│   │   └── services/             # Tarjetas interactivas de servicios
+│   ├── data/
+│   │   └── barberiaData.js       # Modelos y datos de prueba alineados a BD
+│   ├── services/
+│   │   └── appointmentService.js # Capa de servicio desacoplada para API
+│   ├── styles/
+│   │   └── index.css             # Hoja de estilos centralizada
+│   ├── utils/
+│   │   └── appointmentValidation.js # Reglas de validación y formateo es-CO
+│   ├── App.jsx                   # Orquestador del estado y flujo del módulo
+│   └── main.jsx                  # Punto de montaje del DOM con StrictMode
+├── ENLACE_REPOSITORIO.txt        # Documento oficial de enlace remoto
+├── index.html                    # Plantilla HTML5 con metadatos y accesibilidad
+└── package.json                  # Dependencias y scripts del proyecto
 ```
 
-### Ejecución
+---
 
-1. Instale Node.js 20 o superior.
-2. En la raíz del proyecto ejecute `npm install`.
-3. Ejecute `npm run dev`.
-4. Abra la dirección local que muestre Vite, normalmente `http://localhost:5173`.
+## 🚀 Instrucciones de Ejecución
 
-Para crear el paquete de producción ejecute `npm run build`.
+1. Asegúrese de contar con **Node.js 20+** instalado.
+2. Clone o descargue el repositorio:
+   ```bash
+   git clone https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos.git
+   cd barberia-harry-estilos/frontend
+   ```
+3. Instale las dependencias del proyecto:
+   ```bash
+   npm install
+   ```
+4. Inicie el servidor de desarrollo local:
+   ```bash
+   npm run dev
+   ```
+5. Abra en su navegador la URL proporcionada por Vite (usualmente `http://localhost:5173`).
 
-### Integración futura
+Para generar el bundle optimizado para producción:
+```bash
+npm run build
+```
 
-Actualmente `src/services/appointmentService.js` simula las operaciones de guardar y cancelar. Para conectarlo al backend de Java/MySQL del proyecto anterior, reemplace esas funciones por solicitudes HTTP a endpoints que gestionen citas, servicios y barberos. La interfaz no debe consultar directamente la base de datos.
+---
 
-### Evidencia de versionamiento
+## 🔗 Integración con el Backend Java Web
 
-El proyecto se configuró para el repositorio remoto `Programa-Git`. No se incluye `node_modules` ni la carpeta de compilación en el comprimido.
+El archivo `src/services/appointmentService.js` implementa el patrón de repositorio para interactuar asíncronamente con los endpoints del backend en Java Web MVC (Servlets y MySQL) implementado en las evidencias anteriores, permitiendo conectar la base de datos sin modificar la interfaz de usuario.

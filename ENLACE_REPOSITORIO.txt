@@ -1,16 +1,19 @@
-EVIDENCIA GA7-220501096-AA4-EV03
-PROYECTO: Barber System - Módulo de agendamiento
+EVIDENCIA: GA7-220501096-AA4-EV03
+ACTIVIDAD: Componente front-end del proyecto formativo y proyectos de clase
+PROYECTO FORMATIVO: Barbería Harry Estilos - Módulo de Agendamiento
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
 APRENDIZ: Diego Fernando Caicedo Saldarriaga
 
-PERFIL GITHUB DEL APRENDIZ:
+PERFIL DE GITHUB DEL APRENDIZ:
 https://github.com/dfcaicedosaldarriaga-cmd
 
-URL DESTINO DEL REPOSITORIO DEL PROYECTO:
-https://github.com/dfcaicedosaldarriaga-cmd/Programa-Git
+URL DEL REPOSITORIO OFICIAL DEL PROYECTO:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
 
-ESTADO:
-La URL del repositorio remoto está configurada localmente y corresponde al proyecto
-publicado por el aprendiz en GitHub.
+UBICACIÓN DEL MÓDULO FRONT-END EN EL REPOSITORIO:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos/tree/main/frontend
 
-Para publicar los cambios de esta evidencia en el repositorio ejecute:
-git push origin main
+ESTADO DE VERSIONAMIENTO:
+Código front-end desarrollado en React 19 + Vite, debidamente versionado,
+comentado bajo estándar JSDoc y publicado en la rama 'main' del repositorio remoto.
+Se integra de forma armónica con el backend Java Web MVC y la base de datos MySQL del proyecto.

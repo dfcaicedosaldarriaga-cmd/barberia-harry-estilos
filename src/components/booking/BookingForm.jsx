@@ -1,6 +1,26 @@
 import React from "react";
 import ServiceCard from "../services/ServiceCard";
 
+/**
+ * Componente BookingForm - Formulario principal de captura y validación de citas.
+ * Implementa controles para nombre del cliente, selección visual de servicios,
+ * elección de barbero disponible y programación de fecha y hora hábil.
+ * 
+ * Cumple con principios de accesibilidad WCAG:
+ * - Vinculación semántica label-input mediante htmlFor/id.
+ * - Soporte para lectores de pantalla con aria-invalid y aria-describedby.
+ * 
+ * @component
+ * @param {Object} props
+ * @param {Array<{id: string, name: string}>} props.barbers Lista de barberos disponibles.
+ * @param {Object} props.errors Errores de validación actuales por campo.
+ * @param {Object} props.formData Valores vigentes del formulario.
+ * @param {Function} props.onChange Callback ante modificaciones en inputs.
+ * @param {Function} props.onSelectService Callback para seleccionar una tarjeta de servicio.
+ * @param {Function} props.onSubmit Callback ejecutado al enviar el formulario.
+ * @param {Array<{id: string, name: string, description: string, price: number, duration: number}>} props.services
+ * @returns {JSX.Element} Formulario de agendamiento interactivo.
+ */
 export default function BookingForm({
   barbers,
   errors,

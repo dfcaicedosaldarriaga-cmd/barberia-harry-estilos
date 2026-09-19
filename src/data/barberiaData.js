@@ -1,3 +1,13 @@
+/**
+ * Datos semilla y modelos en memoria para Barbería Harry Estilos.
+ * Representan las entidades del dominio (Servicios, Barberos y Citas)
+ * definidas en los diagramas de clases y casos de uso del proyecto formativo.
+ */
+
+/**
+ * Catálogo oficial de servicios ofrecidos en Barbería Harry Estilos.
+ * Incluye tarifas en COP y tiempos estimados de atención en minutos.
+ */
 export const SERVICES = [
   {
     id: "corte-clasico",
@@ -22,12 +32,19 @@ export const SERVICES = [
   },
 ];
 
+/**
+ * Equipo de profesionales de barbería disponibles para agendamiento.
+ * Se vincula con la tabla `barberos` de la base de datos MySQL del proyecto.
+ */
 export const BARBERS = [
   { id: "harry", name: "Harry" },
   { id: "andres", name: "Andrés" },
   { id: "camilo", name: "Camilo" },
 ];
 
+/**
+ * Cita inicial de demostración para visualización y pruebas de cancelación.
+ */
 export const INITIAL_APPOINTMENTS = [
   {
     id: "CIT-1001",
