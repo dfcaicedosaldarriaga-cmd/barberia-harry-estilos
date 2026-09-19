@@ -1,0 +1,114 @@
+:root {
+  color: #f7f2ea;
+  background: #17120e;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body { margin: 0; min-width: 320px; background: #17120e; }
+
+button, input, select { font: inherit; }
+
+button { cursor: pointer; }
+
+a { color: inherit; text-decoration: none; }
+
+.app-shell { min-height: 100vh; background: linear-gradient(145deg, #17120e 0%, #24201a 48%, #17120e 100%); }
+
+.site-header,
+.hero,
+.content-section,
+.site-footer {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.brand { display: inline-flex; align-items: center; gap: .6rem; font-size: 1.15rem; letter-spacing: .02em; }
+.brand-mark { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border: 1px solid #d5a84e; border-radius: 50%; color: #d5a84e; }
+.site-header nav { display: flex; gap: 1.1rem; color: #d6cdc1; font-size: .93rem; }
+.site-header nav a:hover, .site-header nav a:focus-visible { color: #f5c866; }
+
+.hero { padding: 4.5rem 0 3rem; max-width: 1120px; }
+.hero h1, .section-heading h2, .summary-card h2 { font-family: Georgia, "Times New Roman", serif; }
+.hero h1 { max-width: 650px; margin: .25rem 0 .85rem; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1; }
+.hero > p:last-child { max-width: 590px; margin: 0; color: #d6cdc1; font-size: 1.08rem; line-height: 1.6; }
+.eyebrow { margin: 0; color: #f5c866; font-size: .76rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+
+.content-section { padding: 2rem 0 4rem; }
+.section-heading { margin-bottom: 1.35rem; }
+.section-heading h2 { margin: .25rem 0 0; font-size: 2rem; }
+.section-heading--inline { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
+.counter { padding: .45rem .75rem; border: 1px solid #675a4b; border-radius: 999px; color: #d6cdc1; font-size: .85rem; }
+
+.booking-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(260px, .85fr); gap: 1.25rem; align-items: start; }
+.booking-form, .summary-card, .appointment-card { border: 1px solid #4f453a; border-radius: 15px; background: rgba(43, 37, 31, .88); box-shadow: 0 16px 45px rgba(0, 0, 0, .16); }
+.booking-form { padding: clamp(1rem, 3vw, 1.75rem); }
+.form-field { padding: 0; margin: 0 0 1.15rem; border: 0; }
+.form-field label, .form-field legend { display: block; margin-bottom: .45rem; font-size: .93rem; font-weight: 700; }
+.form-field input, .form-field select { width: 100%; padding: .73rem .8rem; border: 1px solid #6c5f50; border-radius: 8px; color: #f7f2ea; background: #231e18; outline: none; }
+.form-field input:focus, .form-field select:focus { border-color: #f5c866; box-shadow: 0 0 0 3px rgba(245, 200, 102, .16); }
+.form-field input[aria-invalid="true"], .form-field select[aria-invalid="true"] { border-color: #e77969; }
+.form-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 1rem; }
+.field-error { display: block; min-height: 1.2rem; padding-top: .25rem; color: #ffa99d; font-size: .79rem; }
+
+.services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+.service-card { display: grid; gap: .35rem; min-height: 145px; padding: .85rem; border: 1px solid #65594c; border-radius: 10px; color: #d6cdc1; text-align: left; background: #29231d; transition: border-color .18s, transform .18s, background .18s; }
+.service-card:hover, .service-card:focus-visible { border-color: #f5c866; transform: translateY(-2px); }
+.service-card--selected { border-color: #f5c866; background: #3a3021; box-shadow: inset 0 0 0 1px #f5c866; }
+.service-card__name { color: #f7f2ea; font-weight: 800; }
+.service-card small { color: #c3b7a8; }
+
+.button { min-height: 42px; padding: .65rem 1rem; border-radius: 8px; font-weight: 800; transition: transform .18s, background .18s; }
+.button:hover { transform: translateY(-1px); }
+.button--primary { width: 100%; border: 1px solid #f5c866; color: #201909; background: #f5c866; }
+.button--secondary { border: 1px solid #9a594f; color: #ffc6bd; background: transparent; }
+
+.summary-card { position: sticky; top: 1rem; padding: 1.35rem; }
+.summary-card h2 { margin: .35rem 0 1.2rem; font-size: 1.65rem; }
+.summary-card dl { margin: 0; }
+.summary-card dl div { display: flex; justify-content: space-between; gap: .75rem; padding: .65rem 0; border-bottom: 1px solid #4f453a; }
+.summary-card dt { color: #c3b7a8; }
+.summary-card dd { max-width: 55%; margin: 0; text-align: right; font-weight: 700; }
+.summary-card__total { display: flex; justify-content: space-between; padding-top: 1.15rem; font-size: 1.1rem; }
+.summary-card__total strong { color: #f5c866; }
+
+.alert { margin: 0 0 1rem; padding: .75rem 1rem; border-radius: 8px; font-size: .92rem; }
+.alert--success { border: 1px solid #65947d; color: #c7f3d6; background: rgba(45, 103, 74, .35); }
+.alert--error { border: 1px solid #a95f55; color: #ffc6bd; background: rgba(129, 55, 44, .3); }
+
+.appointment-list { display: grid; gap: .8rem; }
+.appointment-card { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.15rem; }
+.appointment-card h3 { margin: .5rem 0 .25rem; font-size: 1.05rem; }
+.appointment-card p { margin: .2rem 0; color: #d6cdc1; font-size: .93rem; }
+.appointment-card strong { display: block; margin-top: .4rem; color: #f5c866; }
+.status { display: inline-flex; padding: .25rem .55rem; border-radius: 999px; color: #c7f3d6; background: rgba(45, 103, 74, .55); font-size: .72rem; font-weight: 800; }
+.status--cancelled { color: #ffc6bd; background: rgba(129, 55, 44, .65); }
+
+.site-footer { padding: 2rem 0; color: #9f9487; text-align: center; font-size: .82rem; }
+
+@media (max-width: 760px) {
+  .site-header { flex-wrap: wrap; padding: 1rem 0; }
+  .site-header nav { width: 100%; justify-content: space-between; }
+  .hero { padding-top: 2.5rem; }
+  .booking-layout { grid-template-columns: 1fr; }
+  .summary-card { position: static; }
+  .form-grid, .services-grid { grid-template-columns: 1fr; }
+  .appointment-card { align-items: start; flex-direction: column; }
+}
+
+@media (max-width: 420px) {
+  .site-header nav { gap: .55rem; font-size: .82rem; }
+  .section-heading--inline { align-items: start; flex-direction: column; }
+}
