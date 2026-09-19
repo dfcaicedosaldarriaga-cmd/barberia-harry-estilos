@@ -1,10 +1,14 @@
-# Barber System - GA7-220501096-AA4-EV03
+# Programa-Git
+
+Repositorio académico de **Diego Fernando Caicedo Saldarriaga**.
+
+## Barber System - GA7-220501096-AA4-EV03
 
 Módulo front-end de **agendamiento de citas** para una barbería. Se desarrolla como evidencia de la actividad **GA7-220501096-AA4-EV03: Componente front-end del proyecto formativo y proyectos de clase**.
 
 **Aprendiz:** Diego Fernando Caicedo Saldarriaga
 
-## Funcionalidades
+### Funcionalidades
 
 - Selección visual y reutilizable de servicios.
 - Registro de citas con cliente, barbero, fecha y hora.
@@ -13,7 +17,7 @@ Módulo front-end de **agendamiento de citas** para una barbería. Se desarrolla
 - Consulta y cancelación de citas en memoria.
 - Diseño adaptable para escritorio y móvil.
 
-## Tecnologías
+### Tecnologías
 
 - React 19
 - JavaScript (ES modules)
@@ -21,7 +25,7 @@ Módulo front-end de **agendamiento de citas** para una barbería. Se desarrolla
 - Vite
 - Git para control de versiones
 
-## Estructura relevante
+### Estructura relevante
 
 ```text
 src/
@@ -32,7 +36,7 @@ src/
   App.jsx           Orquestación del módulo de agendamiento
 ```
 
-## Ejecución
+### Ejecución
 
 1. Instale Node.js 20 o superior.
 2. En la raíz del proyecto ejecute `npm install`.
@@ -41,10 +45,10 @@ src/
 
 Para crear el paquete de producción ejecute `npm run build`.
 
-## Integración futura
+### Integración futura
 
 Actualmente `src/services/appointmentService.js` simula las operaciones de guardar y cancelar. Para conectarlo al backend de Java/MySQL del proyecto anterior, reemplace esas funciones por solicitudes HTTP a endpoints que gestionen citas, servicios y barberos. La interfaz no debe consultar directamente la base de datos.
 
-## Evidencia de versionamiento
+### Evidencia de versionamiento
 
-El proyecto fue inicializado como repositorio Git local y se configuró para el repositorio remoto `Programa-Git` de la cuenta del aprendiz. No se incluye `node_modules` ni la carpeta de compilación en el comprimido.
+El proyecto se configuró para el repositorio remoto `Programa-Git`. No se incluye `node_modules` ni la carpeta de compilación en el comprimido.
