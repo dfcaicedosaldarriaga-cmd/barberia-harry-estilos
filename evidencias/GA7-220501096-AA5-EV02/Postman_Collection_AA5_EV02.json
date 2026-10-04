@@ -1,0 +1,241 @@
+{
+    "info": {
+        "_postman_id": "aa5-ev02-barberia-harry-estilos",
+        "name": "Barberia Harry Estilos API - GA7-220501096-AA5-EV02",
+        "description": "Colección de pruebas para el servicio web REST de autenticación y registro (AA5-EV02). Aprendiz: Hernán Salazar Ospina.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "1. Login - Autenticacion Exitosa (200 OK)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "usuario",
+                            "value": "admin@harryestilos.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "admin123",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/usuario/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "usuario",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "2. Login - Credenciales Erroneas (401 Unauthorized)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "usuario",
+                            "value": "admin@harryestilos.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "clave_erronea",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/usuario/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "usuario",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "3. Login - Parametros Incompletos (400 Bad Request)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "usuario",
+                            "value": "admin@harryestilos.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/usuario/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "usuario",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "4. Registro - Usuario Nuevo Exitoso (201 Created)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "nombre",
+                            "value": "Carlos Mendoza",
+                            "type": "text"
+                        },
+                        {
+                            "key": "usuario",
+                            "value": "carlos.mendoza@email.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "password123",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/usuario/registro",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "usuario",
+                        "registro"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "5. Registro - Correo Duplicado (409 Conflict)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "nombre",
+                            "value": "Carlos Mendoza",
+                            "type": "text"
+                        },
+                        {
+                            "key": "usuario",
+                            "value": "carlos.mendoza@email.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "password123",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/usuario/registro",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "usuario",
+                        "registro"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "6. Registro - Password Invalido (400 Bad Request)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "nombre",
+                            "value": "Ana Gomez",
+                            "type": "text"
+                        },
+                        {
+                            "key": "usuario",
+                            "value": "ana.gomez@email.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "123",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/usuario/registro",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "usuario",
+                        "registro"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

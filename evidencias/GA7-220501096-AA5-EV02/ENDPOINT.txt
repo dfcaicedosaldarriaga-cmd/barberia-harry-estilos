@@ -1,0 +1,86 @@
+===============================================================================
+SENA - PROGRAMA DE FORMACIÓN: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO)
+EVIDENCIA: GA7-220501096-AA5-EV02 - TESTING DE LA API CON POSTMAN
+PROYECTO FORMATIVO: BARBERÍA HARRY ESTILOS - MÓDULO DE AUTENTICACIÓN REST
+APRENDIZ: HERNÁN SALAZAR OSPINA
+===============================================================================
+
+-------------------------------------------------------------------------------
+1. ESPECIFICACIÓN GENERAL DE LA API REST
+-------------------------------------------------------------------------------
+Servidor Base (Local): http://localhost:8081
+Formato de Envíos: application/x-www-form-urlencoded
+Seguridad: Encriptación SHA-256 con Salt dinámico por usuario en Base de Datos MySQL.
+Base de Datos: barberia_harry_estilos (Tabla: usuarios)
+
+-------------------------------------------------------------------------------
+2. LISTADO Y DETALLE DE ENDPOINTS
+-------------------------------------------------------------------------------
+
+[ENDPOINT 1]: INICIO DE SESIÓN / AUTENTICACIÓN
+- Ruta URL: http://localhost:8081/api/usuario/login
+- Método HTTP: POST
+- Content-Type: application/x-www-form-urlencoded
+- Parámetros de Entrada:
+  * usuario  (String, Obligatorio): Correo electrónico registrado.
+  * password (String, Obligatorio): Contraseña en texto plano.
+
+- Códigos de Respuesta HTTP Esperados:
+  * 200 OK: "Autenticación satisfactoria."
+  * 400 Bad Request: "Los parámetros 'usuario' y 'password' son obligatorios."
+  * 401 Unauthorized: "Error en la autenticación."
+  * 403 Forbidden: "Error en la autenticación: la cuenta se encuentra inactiva."
+
+- Ejemplos de Pruebas en Postman:
+  a) Login Exitoso (200 OK):
+     POST http://localhost:8081/api/usuario/login
+     Body: usuario=admin@harryestilos.com&password=admin123
+     Respuesta: "Autenticación satisfactoria."
+
+  b) Login Fallido por Contraseña Errónea (401 Unauthorized):
+     POST http://localhost:8081/api/usuario/login
+     Body: usuario=admin@harryestilos.com&password=clave_incorrecta
+     Respuesta: "Error en la autenticación."
+
+  c) Login Fallido por Parámetros Incompletos (400 Bad Request):
+     POST http://localhost:8081/api/usuario/login
+     Body: usuario=admin@harryestilos.com&password=
+     Respuesta: "Los parámetros 'usuario' y 'password' son obligatorios."
+
+-------------------------------------------------------------------------------
+
+[ENDPOINT 2]: REGISTRO DE NUEVO USUARIO
+- Ruta URL: http://localhost:8081/api/usuario/registro
+- Método HTTP: POST
+- Content-Type: application/x-www-form-urlencoded
+- Parámetros de Entrada:
+  * nombre   (String, Obligatorio): Nombre completo del cliente/usuario.
+  * usuario  (String, Obligatorio): Correo electrónico válido (formato email).
+  * password (String, Obligatorio): Contraseña (mínimo 6 caracteres).
+
+- Códigos de Respuesta HTTP Esperados:
+  * 201 Created: "Usuario registrado correctamente."
+  * 400 Bad Request: "Completa 'nombre', 'usuario' y 'password' (mínimo 6 caracteres)." / "El campo 'usuario' debe ser un correo con formato válido..."
+  * 409 Conflict: "Ya existe una cuenta registrada con ese correo."
+  * 500 Internal Server Error: "No fue posible completar el registro."
+
+- Ejemplos de Pruebas en Postman:
+  a) Registro Exitoso (201 Created):
+     POST http://localhost:8081/api/usuario/registro
+     Body: nombre=Carlos Mendoza&usuario=carlos.mendoza@email.com&password=password123
+     Respuesta: "Usuario registrado correctamente."
+
+  b) Registro Fallido por Correo Duplicado (409 Conflict):
+     POST http://localhost:8081/api/usuario/registro
+     Body: nombre=Carlos Mendoza&usuario=carlos.mendoza@email.com&password=password123
+     Respuesta: "Ya existe una cuenta registrada con ese correo."
+
+  c) Registro Fallido por Contraseña Corta (400 Bad Request):
+     POST http://localhost:8081/api/usuario/registro
+     Body: nombre=Ana Gómez&usuario=ana.gomez@email.com&password=123
+     Respuesta: "Completa 'nombre', 'usuario' y 'password' (mínimo 6 caracteres)."
+
+===============================================================================
+NOTA: Esta especificación se entrega acompañada de la colección de Postman
+'Postman_Collection_AA5_EV02.json' lista para importar y probar.
+===============================================================================

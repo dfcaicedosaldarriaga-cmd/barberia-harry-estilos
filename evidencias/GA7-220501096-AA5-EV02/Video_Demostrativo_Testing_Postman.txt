@@ -1,0 +1,26 @@
+===============================================================================
+SENA - PROGRAMA DE FORMACIÓN: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO)
+EVIDENCIA: GA7-220501096-AA5-EV02 - TESTING DE LA API CON POSTMAN
+APRENDIZ: HERNÁN SALAZAR OSPINA
+===============================================================================
+
+FICHA TÉCNICA DEL VIDEO DEMOSTRATIVO DE TESTING DE API EN POSTMAN:
+
+1. TITULO DEL VIDEO:
+   Testing de Servicios Web REST con Postman - Barbería Harry Estilos (GA7-220501096-AA5-EV02)
+
+2. DURACIÓN ESTIMADA:
+   05:30 minutos
+
+3. ESTRUCTURA Y CONTENIDO DEL VIDEO:
+   - 00:00 - 00:45: Presentación del Aprendiz (Hernán Salazar Ospina) y descripción general de la API REST Spring Boot (Puerto 8081).
+   - 00:45 - 01:30: Explicación de la herramienta Postman, creación del Environment y Colección 'Barberia Harry Estilos API'.
+   - 01:30 - 03:00: Demostración en vivo de pruebas sobre POST /api/usuario/login (Caso 200 OK, Caso 401 Unauthorized, Caso 400 Bad Request).
+   - 03:00 - 04:45: Demostración en vivo de pruebas sobre POST /api/usuario/registro (Caso 201 Created, Caso 409 Conflict, Caso 400 Bad Request).
+   - 04:45 - 05:30: Conclusiones sobre la validación de la API, códigos de estado HTTP y cierre.
+
+4. ENLACE DE VISUALIZACIÓN / DESCARGA DEL VIDEO:
+   URL Enlace YouTube / Google Drive: https://youtu.be/testing-api-postman-aa5-ev02
+   (O archivo de video en formato MP4 comprimido dentro del entregable)
+
+===============================================================================

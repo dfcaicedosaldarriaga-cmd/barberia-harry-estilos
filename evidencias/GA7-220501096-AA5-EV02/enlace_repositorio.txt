@@ -1,0 +1,24 @@
+===============================================================================
+SENA - PROGRAMA DE FORMACIÓN: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO)
+EVIDENCIA: GA7-220501096-AA5-EV02 - TESTING DE LA API CON POSTMAN
+PROYECTO FORMATIVO: Barbería Harry Estilos - Servicio web de autenticación
+APRENDIZ: Hernán Salazar Ospina
+===============================================================================
+
+PERFIL DE GITHUB (repositorio compartido del equipo):
+https://github.com/dfcaicedosaldarriaga-cmd
+
+URL DEL REPOSITORIO OFICIAL DEL PROYECTO:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+
+UBICACIÓN DEL MÓDULO API EN EL REPOSITORIO:
+Carpeta "servicio-auth-api" en la raíz del repositorio. Módulo independiente
+desarrollado en Java 17 + Spring Boot 3.3.4 con empaquetado Maven.
+
+RELACIÓN Y CONTINUIDAD DE EVIDENCIAS:
+- EV01 (GA7-220501096-AA5-EV01): Diseño y desarrollo del Servicio Web REST de Autenticación.
+- EV02 (GA7-220501096-AA5-EV02): Testing integral de la API REST utilizando la herramienta Postman,
+  documentando las ejecuciones, códigos de respuesta HTTP (200, 201, 400, 401, 409) y entregables.
+
+ESTADO DE VERSIONAMIENTO:
+Código versión final, documentado y publicado en la rama 'main' del repositorio remoto compartido del equipo.

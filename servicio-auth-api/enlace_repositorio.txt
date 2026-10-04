@@ -1,0 +1,32 @@
+EVIDENCIA: GA7-220501096-AA5-EV01
+ACTIVIDAD: Diseño y desarrollo de servicios web - caso
+PROYECTO FORMATIVO: Barbería Harry Estilos - Servicio web de autenticación
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
+APRENDIZ: Hernán Salazar Ospina
+
+PERFIL DE GITHUB (repositorio compartido del equipo):
+https://github.com/dfcaicedosaldarriaga-cmd
+Nota: el equipo trabaja sobre un único repositorio compartido (cuenta de
+Diego Fernando Caicedo Saldarriaga), igual que en las evidencias
+anteriores; no se crearon repositorios individuales por aprendiz.
+
+URL DEL REPOSITORIO OFICIAL DEL PROYECTO:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+
+UBICACIÓN DE ESTE MÓDULO EN EL REPOSITORIO:
+Carpeta "servicio-auth-api" en la raíz del repositorio, hermana del
+proyecto principal (WAR JSP/Servlet). Es un módulo Maven Spring Boot
+independiente, no integrado al WAR, para no modificar el despliegue
+existente.
+
+RELACIÓN CON EL PROYECTO PRINCIPAL:
+Este servicio reutiliza literalmente las clases UsuarioDAO, Usuario,
+PasswordUtil y RegistroValidator del módulo de sesión del proyecto
+principal (GA7-220501096-AA3-EV01/EV02) y opera sobre la misma base de
+datos MySQL "barberia_harry_estilos", tabla "usuarios". No se duplican
+datos ni se crea un modelo de usuarios paralelo.
+
+ESTADO DE VERSIONAMIENTO:
+Código desarrollado en Java 17 + Spring Boot 3.3.4, debidamente
+versionado, comentado, y publicado en la rama 'main' del repositorio
+remoto compartido del equipo.
