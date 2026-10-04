@@ -1,0 +1,7 @@
+com\harryestilos\model\Usuario.class
+com\harryestilos\util\PasswordUtil.class
+com\harryestilos\util\RegistroValidator.class
+com\harryestilos\api\ServicioAuthApiApplication.class
+com\harryestilos\api\UsuarioController.class
+com\harryestilos\dao\ConexionDB.class
+com\harryestilos\dao\UsuarioDAO.class
