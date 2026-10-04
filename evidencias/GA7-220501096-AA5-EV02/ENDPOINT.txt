@@ -2,7 +2,7 @@
 SENA - PROGRAMA DE FORMACIÓN: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO)
 EVIDENCIA: GA7-220501096-AA5-EV02 - TESTING DE LA API CON POSTMAN
 PROYECTO FORMATIVO: BARBERÍA HARRY ESTILOS - MÓDULO DE AUTENTICACIÓN REST
-APRENDIZ: HERNÁN SALAZAR OSPINA
+APRENDIZ: DIEGO FERNANDO CAICEDO SALDARRIAGA
 ===============================================================================
 
 -------------------------------------------------------------------------------
