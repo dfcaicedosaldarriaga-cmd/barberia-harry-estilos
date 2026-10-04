@@ -2,7 +2,7 @@
     "info": {
         "_postman_id": "aa5-ev02-barberia-harry-estilos",
         "name": "Barberia Harry Estilos API - GA7-220501096-AA5-EV02",
-        "description": "Colección de pruebas para el servicio web REST de autenticación y registro (AA5-EV02). Aprendiz: Hernán Salazar Ospina.",
+        "description": "Colección de pruebas para el servicio web REST de autenticación y registro (AA5-EV02). Aprendiz: Diego Fernando Caicedo Saldarriaga & José.",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
