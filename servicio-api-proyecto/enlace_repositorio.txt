@@ -1,0 +1,37 @@
+===============================================================================
+SERVICIO NACIONAL DE APRENDIZAJE - SENA
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL
+TECNOLOGÍA EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA: 3336210
+===============================================================================
+
+EVIDENCIA: GA7-220501096-AA5-EV03
+ACTIVIDAD: Diseño y desarrollo de servicios web – proyecto.
+PROYECTO FORMATIVO: Barbería Harry Estilos - Sistema Web de Gestión y Agendamiento
+
+APRENDIZ:
+Diego Fernando Caicedo Saldarriaga
+
+INSTRUCTORA:
+Verónica M. Muñoz
+
+===============================================================================
+ENLACE DEL REPOSITORIO DE CONTROL DE VERSIONES (GITHUB):
+===============================================================================
+
+URL OFICIAL:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+
+RAMA PRINCIPAL:
+main
+
+DESCRIPCIÓN DE LA ENTREGA:
+Este repositorio contiene el código fuente completo del proyecto formativo Barbería Harry Estilos, incluyendo la implementación de los servicios web RESTful (Spring Boot 3, Java 17+, JDBC, MySQL) para el cumplimiento de la evidencia GA7-220501096-AA5-EV03:
+- Módulo de Citas (CRUD completo y filtros por barbero)
+- Módulo de Catálogo de Servicios (Consulta, creación y actualización)
+- Módulo de Barberos (Consulta y registro del equipo)
+- Módulo de Clientes (Consulta, creación y actualización)
+- Módulo de Autenticación y Registro de Usuarios (Hash SHA-256 + Salt)
+- Documentación OpenAPI 3.0 / Swagger UI interactiva integrada
+- Colección de pruebas en Postman v2.1.0
+
+===============================================================================
