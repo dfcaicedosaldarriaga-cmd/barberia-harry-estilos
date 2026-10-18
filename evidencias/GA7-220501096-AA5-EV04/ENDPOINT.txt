@@ -1,0 +1,244 @@
+================================================================================
+SERVICIO NACIONAL DE APRENDIZAJE - SENA
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - CAUCA
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA 3336210
+EVIDENCIA: GA7-220501096-AA5-EV04: API DEL PROYECTO (TESTING CON POSTMAN)
+APRENDICES: DIEGO FERNANDO CAICEDO SALDARRIAGA & JOSÉ
+INSTRUCTORA: VERÓNICA MARÍA MUÑOZ
+PROYECTO: BARBERÍA HARRY ESTILOS RESTful WEB SERVICES
+================================================================================
+
+CATÁLOGO TÉCNICO DE ENDPOINTS DEL PROYECTO FORMATIVO
+SERVIDOR LOCAL: http://localhost:8081
+PROTOCOLO: HTTP/1.1 - JSON RESTful API
+DOCUMENTACIÓN SWAGGER / OPENAPI 3.0: http://localhost:8081/swagger-ui/index.html
+ESPECIFICACIÓN OPENAPI JSON: http://localhost:8081/v3/api-docs
+
+--------------------------------------------------------------------------------
+1. MÓDULO DE CITAS (AGENDAMIENTO Y TURNOS)
+--------------------------------------------------------------------------------
+
+1.1 GET /api/citas
+    - Descripción: Recupera la lista completa de todas las citas agendadas.
+    - Cabeceras: Accept: application/json
+    - Parámetros: Ninguno
+    - Códigos de Respuesta:
+        200 OK: Retorna arreglo JSON con las citas registradas en el sistema.
+    - Respuesta Ejemplo:
+        [
+          {
+            "id": 1,
+            "clienteId": 1,
+            "barberoId": 1,
+            "servicioId": 1,
+            "fecha": "2026-10-31",
+            "hora": "16:00:00",
+            "estado": "CONFIRMADA",
+            "clienteNombre": "Carlos Mendoza",
+            "barberoNombre": "Harry",
+            "servicioNombre": "Corte Clasico",
+            "precio": 25000
+          }
+        ]
+
+1.2 GET /api/citas/{id}
+    - Descripción: Consulta los detalles de una cita específica mediante su identificador.
+    - Cabeceras: Accept: application/json
+    - Parámetros de Ruta:
+        - id (entero, obligatorio): ID único de la cita en base de datos.
+    - Códigos de Respuesta:
+        200 OK: Objeto JSON con el detalle de la cita solicitada.
+        404 Not Found: {"error": "No se encontró la cita con ID {id}"}
+
+1.3 POST /api/citas
+    - Descripción: Agenda y registra una nueva cita para un cliente.
+    - Cabeceras: Content-Type: application/json, Accept: application/json
+    - Cuerpo de la Petición (Request Body):
+        {
+          "clienteNombre": "Santiago Morales",
+          "clienteTelefono": "3159876543",
+          "clienteCorreo": "santiago.morales@example.com",
+          "barberoId": 2,
+          "servicioId": 1,
+          "fecha": "2026-11-05",
+          "hora": "14:00",
+          "estado": "CONFIRMADA"
+        }
+    - Códigos de Respuesta:
+        201 Created: {"mensaje": "Cita agendada correctamente", "citaId": 5, "cita": {...}}
+        400 Bad Request: {"error": "Los campos clienteNombre, barberoId, servicioId, fecha y hora son obligatorios."}
+
+1.4 PUT /api/citas/{id}
+    - Descripción: Modifica la fecha, hora o estado de una cita previamente agendada.
+    - Cabeceras: Content-Type: application/json, Accept: application/json
+    - Parámetros de Ruta: id (entero, obligatorio)
+    - Cuerpo de la Petición (Request Body):
+        {
+          "fecha": "2026-11-10",
+          "hora": "16:30",
+          "estado": "CONFIRMADA"
+        }
+    - Códigos de Respuesta:
+        200 OK: {"mensaje": "Cita 1 actualizada correctamente.", "cita": {...}}
+        404 Not Found: {"error": "Cita no encontrada con ID {id}"}
+        400 Bad Request: {"error": "Parámetros de reprogramación inválidos."}
+
+1.5 DELETE /api/citas/{id}
+    - Descripción: Cancela y elimina una cita del sistema liberando el turno del barbero.
+    - Parámetros de Ruta: id (entero, obligatorio)
+    - Códigos de Respuesta:
+        200 OK: {"mensaje": "Cita {id} cancelada y eliminada con éxito."}
+        404 Not Found: {"error": "No se encontró la cita con ID {id} para eliminar."}
+
+1.6 GET /api/citas/barbero/{barberoId}
+    - Descripción: Filtra todas las citas agendadas asignadas a un barbero en específico.
+    - Parámetros de Ruta: barberoId (entero, obligatorio)
+    - Códigos de Respuesta:
+        200 OK: Arreglo JSON con las citas del barbero seleccionado.
+
+--------------------------------------------------------------------------------
+2. MÓDULO DE SERVICIOS (CATÁLOGO DE LA BARBERÍA)
+--------------------------------------------------------------------------------
+
+2.1 GET /api/servicios
+    - Descripción: Consulta el catálogo completo de servicios disponibles con sus tarifas y duraciones.
+    - Códigos de Respuesta:
+        200 OK: Lista JSON de servicios ([Corte Clásico, Barba, Paquete Completo, etc.]).
+
+2.2 GET /api/servicios/{id}
+    - Descripción: Obtiene la información técnica y comercial de un servicio por su ID.
+    - Códigos de Respuesta:
+        200 OK: Objeto JSON del servicio encontrado.
+        404 Not Found: {"error": "Servicio no encontrado"}
+
+2.3 POST /api/servicios
+    - Descripción: Registra un nuevo servicio en el catálogo de Barbería Harry Estilos.
+    - Cabeceras: Content-Type: application/json
+    - Cuerpo de la Petición:
+        {
+          "nombre": "Corte Degradado + Mascarilla Black",
+          "clave": "corte_black_mask",
+          "precio": 32000,
+          "duracionMinutos": 50
+        }
+    - Códigos de Respuesta:
+        201 Created: Objeto JSON con el servicio creado y su ID generado.
+        400 Bad Request: Campos obligatorios incompletos o precio inválido.
+
+2.4 PUT /api/servicios/{id}
+    - Descripción: Actualiza precios, duraciones o denominación de un servicio existente.
+    - Códigos de Respuesta:
+        200 OK: Objeto JSON con los nuevos valores del servicio.
+        404 Not Found: Servicio inexistente.
+
+2.5 DELETE /api/servicios/{id}
+    - Descripción: Elimina un servicio del catálogo.
+    - Códigos de Respuesta:
+        200 OK: Servicio eliminado exitosamente.
+        404 Not Found: Servicio no encontrado.
+
+--------------------------------------------------------------------------------
+3. MÓDULO DE BARBEROS (PERSONAL DE TRABAJO)
+--------------------------------------------------------------------------------
+
+3.1 GET /api/barberos
+    - Descripción: Lista todos los profesionales registrados en la barbería.
+    - Códigos de Respuesta:
+        200 OK: Arreglo JSON de barberos (Harry, Andrés, Camilo, etc.).
+
+3.2 GET /api/barberos/{id}
+    - Descripción: Obtiene el perfil de un barbero por su identificador.
+    - Códigos de Respuesta:
+        200 OK: {"id": 1, "nombre": "Harry"}
+        404 Not Found: {"error": "Barbero no encontrado"}
+
+3.3 POST /api/barberos
+    - Descripción: Agrega un nuevo barbero a la nómina de la barbería.
+    - Cuerpo de la Petición:
+        {
+          "nombre": "Mateo Valencia"
+        }
+    - Códigos de Respuesta:
+        201 Created: {"id": 4, "nombre": "Mateo Valencia"}
+
+--------------------------------------------------------------------------------
+4. MÓDULO DE CLIENTES
+--------------------------------------------------------------------------------
+
+4.1 GET /api/clientes
+    - Descripción: Lista todos los clientes con registro de citas o perfil en el sistema.
+    - Códigos de Respuesta:
+        200 OK: Arreglo JSON de clientes.
+
+4.2 GET /api/clientes/{id}
+    - Descripción: Consulta el perfil de un cliente por su ID.
+    - Códigos de Respuesta:
+        200 OK: Objeto JSON del cliente.
+        404 Not Found: {"error": "Cliente no encontrado"}
+
+4.3 POST /api/clientes
+    - Descripción: Registra un nuevo cliente para asociarle reservas futuras.
+    - Cuerpo de la Petición:
+        {
+          "nombre": "Esteban Restrepo"
+        }
+    - Códigos de Respuesta:
+        201 Created: {"id": 4, "nombre": "Esteban Restrepo"}
+
+--------------------------------------------------------------------------------
+5. MÓDULO DE AUTENTICACIÓN Y SEGURIDAD (CASO DE ESTUDIO GA7)
+--------------------------------------------------------------------------------
+
+5.1 POST /api/usuario/login
+    - Descripción: Autentica un usuario validando credenciales cifradas con SHA-256 + Salt único.
+    - Cabeceras: Content-Type: application/json
+    - Cuerpo de la Petición:
+        {
+          "usuario": "admin@harryestilos.com",
+          "password": "admin123"
+        }
+    - Códigos de Respuesta:
+        200 OK:
+            {
+              "mensaje": "Autenticación satisfactoria.",
+              "usuario": "admin@harryestilos.com",
+              "nombre": "Administrador Harry Estilos",
+              "rol": "ADMINISTRADOR"
+            }
+        401 Unauthorized:
+            {
+              "error": "Error en la autenticación."
+            }
+        400 Bad Request:
+            {
+              "error": "Los parámetros 'usuario' y 'password' son obligatorios."
+            }
+
+5.2 POST /api/usuario/registro
+    - Descripción: Registra una nueva cuenta de usuario encriptando la clave con Salt.
+    - Cabeceras: Content-Type: application/json
+    - Cuerpo de la Petición:
+        {
+          "nombre": "Diego Fernando Caicedo",
+          "usuario": "diego.caicedo@barberia.com",
+          "password": "Password123*"
+        }
+    - Códigos de Respuesta:
+        201 Created:
+            {
+              "mensaje": "Usuario registrado correctamente.",
+              "id": 2,
+              "usuario": "diego.caicedo@barberia.com"
+            }
+        409 Conflict:
+            {
+              "error": "Ya existe una cuenta registrada con ese correo."
+            }
+        400 Bad Request:
+            {
+              "error": "Completa 'nombre', 'usuario' y 'password' (mínimo 6 caracteres)."
+            }
+
+================================================================================
+FIN DEL ARCHIVO ENDPOINT.txt
+================================================================================

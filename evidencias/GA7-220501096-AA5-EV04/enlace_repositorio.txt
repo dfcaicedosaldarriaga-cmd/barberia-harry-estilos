@@ -1,0 +1,33 @@
+================================================================================
+SERVICIO NACIONAL DE APRENDIZAJE - SENA
+CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO) - FICHA 3336210
+================================================================================
+
+EVIDENCIA: GA7-220501096-AA5-EV04: API DEL PROYECTO (TESTING CON POSTMAN)
+APRENDICES:
+- DIEGO FERNANDO CAICEDO SALDARRIAGA (Líder Técnico & Desarrollador Backend)
+- JOSÉ (Co-desarrollador & Tester QA)
+
+INSTRUCTORA TÉCNICA: VERÓNICA MARÍA MUÑOZ
+FECHA: OCTUBRE DE 2026
+
+--------------------------------------------------------------------------------
+ENLACE AL REPOSITORIO OFICIAL EN GITHUB:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+--------------------------------------------------------------------------------
+
+RAMA PRINCIPAL: main
+DESCRIPCIÓN DEL REPOSITORIO:
+Repositorio central del Proyecto Formativo Barbería Harry Estilos que contiene:
+1. Backend RESTful Web Services desarrollado en Java Spring Boot (puerto 8081).
+2. Módulos de servicios: Citas (Agendamiento), Servicios (Catálogo), Barberos, Clientes y Seguridad (Autenticación SHA-256 + Salt).
+3. Especificación técnica interactiva con Swagger OpenAPI 3.0.
+4. Colección exportada de pruebas automatizadas en Postman (versión v2.1.0) con assertions en JavaScript.
+5. Frontend interactivo y trazabilidad de evidencias del SENA.
+
+ENTORNO DE EJECUCIÓN LOCAL:
+- URL Base API: http://localhost:8081
+- Documentación Swagger UI: http://localhost:8081/swagger-ui/index.html
+- Colección Postman incluida en: /COLECCION_POSTMAN/Postman_Collection_AA5_EV04.json
+================================================================================
