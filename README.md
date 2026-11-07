@@ -122,7 +122,7 @@ barberia-harry-estilos/
 ## 👥 Equipo de Desarrollo
 
 **Programa:** Análisis y Desarrollo de Software (ADSO)  
-**Ficha:** 3336210  
+**Ficha:** 3336210-3336209  
 **Centro de Formación:** Centro de Teleinformática y Producción Industrial (CTPI) — Regional Cauca  
 **Instructora:** Verónica María Muñoz  
 
