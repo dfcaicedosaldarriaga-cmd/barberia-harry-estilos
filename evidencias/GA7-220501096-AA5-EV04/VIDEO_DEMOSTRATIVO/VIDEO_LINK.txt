@@ -1,0 +1,22 @@
+Video demostrativo de la ejecución de la colección de Postman
+(GA7-220501096-AA5-EV04).
+
+ENLACE: https://youtu.be/qlTqLFIRvlE
+
+ARCHIVO LOCAL: GA7-220501096-AA5-EV04_video_editado.mp4 (en esta misma
+carpeta, con cortinilla de inicio y de cierre).
+
+Contenido mostrado en el video:
+1. Confirmación de que el módulo servicio-auth-api está corriendo
+   (consola con "Started ServicioAuthApiApplication", puerto 8081).
+2. La colección GA7-220501096-AA5-EV04 en Postman con el entorno
+   "Barberia Harry Estilos - servicio-auth-api" seleccionado.
+3. Ejecución completa de la colección con el Collection Runner.
+4. El resumen de resultados: 14 verificaciones, 10 aprobadas, 0 errores.
+5. Explicación de los 3 casos que fallan (08, 09, 11): la causa está en
+   el cliente de pruebas, no en el API. La versión de Postman usada no
+   propaga correctamente, dentro de una misma corrida, la variable
+   cita_id que el caso 05 guarda al crear la cita. Esto se documenta
+   también en el informe GA7-220501096-AA5-EV04_Pruebas.docx.
+6. El script de prueba del caso 05 (pm.environment.set('cita_id',
+   body.id)), mostrando que la cita sí se crea correctamente con su id.

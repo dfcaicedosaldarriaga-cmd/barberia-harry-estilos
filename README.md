@@ -1,20 +1,23 @@
-﻿# 💈 Barbería Harry Estilos — Sistema Web de Gestión y Agendamiento
+# 💈 Barbería Harry Estilos — Sistema Web de Gestión y Agendamiento
 
-[![SENA ADSO](https://img.shields.io/badge/SENA-ADSO-39a900?style=for-the-badge&logo=sena)](https://oferta.senasofiaplus.edu.co/)
+[![SENA ADSO](https://img.shields.io/badge/SENA-ADSO_Ficha_3336210-39a900?style=for-the-badge&logo=sena)](https://oferta.senasofiaplus.edu.co/)
 [![Java EE](https://img.shields.io/badge/Java_EE-Servlet_6.0-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://jakarta.ee/)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.4-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![React](https://img.shields.io/badge/React_19-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Postman](https://img.shields.io/badge/Postman-Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
 
-Repositorio oficial del proyecto formativo desarrollado por **Diego Fernando Caicedo Saldarriaga** para el programa de formación **Análisis y Desarrollo de Software (ADSO) — SENA**.
+Repositorio oficial del proyecto formativo desarrollado para el programa de formación **Análisis y Desarrollo de Software (ADSO) — SENA (Ficha 3336210)**, Centro de Teleinformática y Producción Industrial (CTPI), Regional Cauca.
 
 ---
 
 ## 📌 Resumen del Proyecto
 
-**Barbería Harry Estilos** es una solución integral diseñada para modernizar y optimizar la administración de turnos, agendamiento de citas, control de servicios y catálogo de barberos profesionales. El software implementa una arquitectura desacoplada y escalable, estructurada en dos componentes principales:
+**Barbería Harry Estilos** es una solución de software integral orientada a modernizar y optimizar la administración de turnos, agendamiento de citas, control de servicios y catálogo de barberos profesionales. El sistema cuenta con una arquitectura desacoplada, escalable y modular, estructurada en tres componentes clave que comparten la base de datos relacional MySQL:
 
-1. **Componente Back-end (Java Web MVC):** Desarrollado con Jakarta EE (Servlets 6.0), JSP/JSTL, DAO JDBC y base de datos relacional MySQL 8.0. (Evidencias previas `GA7-220501096-AA2-EV01` y `GA7-220501096-AA2-EV02`).
-2. **Componente Front-end (React + Vite):** Módulo SPA interactivo de agendamiento de citas con validación en tiempo real, cálculo dinámico de tiempos/tarifas y accesibilidad web. (Evidencia actual **`GA7-220501096-AA4-EV03`**).
+1. **Módulo Web Principal (Java EE / MVC):** Desarrollado con Jakarta Servlets 6.0, JSP/JSTL y capa DAO JDBC sobre Apache Tomcat 10.1 (puerto `8080`).
+2. **Servicio Web REST (Spring Boot API):** Microservicio desacoplado con Spring Boot 3.3.4 (puerto `8081`) que expone endpoints RESTful para autenticación, gestión de barberos, servicios y operaciones CRUD completas sobre citas.
+3. **Módulo Front-end Interactivo (React + Vite):** SPA moderna para agendamiento de citas con validación en tiempo real, cálculo dinámico de tiempos/tarifas y accesibilidad web.
 
 ---
 
@@ -23,89 +26,106 @@ Repositorio oficial del proyecto formativo desarrollado por **Diego Fernando Cai
 ```text
 barberia-harry-estilos/
 │
-├── 📁 frontend/                         # 🌟 MÓDULO REACT (GA7-220501096-AA4-EV03)
-│   ├── docs/
-│   │   └── TRAZABILIDAD_EV03.md         # Matriz de cumplimiento y trazabilidad SENA
-│   ├── src/
-│   │   ├── components/                  # Componentes reutilizables con estándar JSDoc
-│   │   │   ├── appointments/            # Lista y cancelación de citas
-│   │   │   ├── booking/                 # Formulario reactivo y resumen dinámico
-│   │   │   ├── common/                  # Alertas accesibles (role="status")
-│   │   │   ├── layout/                  # Header y Footer con identidad oficial
-│   │   │   └── services/                # Tarjetas interactivas de servicios
-│   │   ├── data/barberiaData.js         # Datos semilla vinculados al modelo de datos
-│   │   ├── services/appointmentService.js # Capa asíncrona desacoplada para API
-│   │   ├── styles/index.css             # Estilos centralizados y responsivos
-│   │   ├── utils/appointmentValidation.js # Validaciones y formateo regional (es-CO)
-│   │   ├── App.jsx                      # Orquestador del estado y flujo
-│   │   └── main.jsx                     # Punto de entrada StrictMode
-│   ├── ENLACE_REPOSITORIO.txt           # Ficha técnica de entrega de la evidencia
-│   ├── index.html                       # HTML5 con metadatos y accesibilidad
-│   ├── package.json                     # Scripts y dependencias de React 19 + Vite
-│   └── README.md                        # Guía específica del módulo front-end
+├── 📁 frontend/                         # 🌟 MÓDULO REACT SPA (GA7-220501096-AA4-EV03)
+│   ├── docs/                            # Matriz de trazabilidad y requerimientos
+│   ├── src/                             # Componentes React (agendamiento, servicios, citas)
+│   ├── package.json                     # React 19 + Vite
+│   └── README.md                        # Guía del módulo frontend
 │
-├── 📁 src/main/java/com/harryestilos/   # ☕ BACK-END JAVA WEB MVC
-│   ├── dao/                             # Capa de Acceso a Datos (Barbero, Cita, Cliente, Servicio)
-│   ├── model/                           # Entidades del Dominio / POJOs
-│   └── servlet/                         # Controladores HTTP (Agendamiento, Citas, Servicios)
+├── 📁 servicio-auth-api/                # 🚀 API REST SPRING BOOT (GA7-AA5 & GA8-AA1)
+│   ├── src/main/java/com/harryestilos/  # Controllers (Auth, Citas, Barberos, Servicios), DAOs y Modelos
+│   ├── src/test/java/                   # Pruebas unitarias automatizadas (JUnit 5)
+│   ├── pom.xml                          # Maven con spring-boot-starter-web y MySQL Connector
+│   └── README.md                        # Documentación técnica de endpoints REST
 │
-├── 📁 src/main/resources/db/init.sql     # Script DDL/DML de la base de datos MySQL
-├── 📁 src/main/webapp/                   # Vistas JSP y recursos web originales
-├── 📁 frontend-original/                 # Maquetas HTML estáticas iniciales
-├── 📄 pom.xml                           # Descriptor Maven de compilación y empaquetado WAR
-├── 📄 INICIAR_PROYECTO.bat              # Script de inicio rápido en 1 clic (Windows)
-└── 📄 MANUAL_DE_USUARIO_Y_DESPLIEGUE.md # Manual técnico del componente Java Web
+├── 📁 src/main/java/com/harryestilos/   # ☕ BACK-END JAVA WEB MVC (GA7-AA2)
+│   ├── dao/                             # Capa de Acceso a Datos JDBC
+│   ├── model/                           # Entidades del Dominio (POJOs)
+│   └── servlet/                         # Controladores HTTP (Tomcat puerto 8080)
+│
+├── 📁 src/main/resources/db/init.sql     # Script DDL/DML de la base de datos MySQL (barberia_harry_estilos)
+├── 📁 src/main/webapp/                   # Vistas JSP, estilos y recursos web
+│
+├── 📁 evidencias/                       # 📑 CARPETAS OFICIALES DE EVIDENCIAS SENA
+│   ├── GA7-220501096-AA5-EV02/          # Testing servicio autenticación (Postman + video + informe)
+│   ├── GA7-220501096-AA5-EV03/          # Diseño y desarrollo servicios web CRUD (código + informe)
+│   ├── GA7-220501096-AA5-EV04/          # API del proyecto (Colección Postman, reporte y video demostrativo)
+│   ├── GA8-220501096-AA1-EV01/          # Diseño de integración de módulos web y API (Diagramas UML SVG/PNG)
+│   └── GA8-220501096-AA1-EV02/          # Módulos integrados y manual técnico (JDBC, ejecutables y pruebas)
+│
+├── 📄 pom.xml                           # Descriptor Maven principal (WAR Java Web)
+├── 📄 INICIAR_PROYECTO.bat              # Script de arranque rápido (Windows)
+└── 📄 MANUAL_DE_USUARIO_Y_DESPLIEGUE.md # Manual técnico y despliegue del componente Java Web
 ```
 
 ---
 
 ## 🚀 Puesta en Marcha
 
-### 1. Ejecución del Módulo Front-end React (`/frontend`) — Evidencia EV03
+### 1. Base de Datos (MySQL 8.0)
+1. Ejecutar el script `src/main/resources/db/init.sql` en MySQL para crear la base de datos `barberia_harry_estilos` y las tablas (`usuarios`, `clientes`, `barberos`, `servicios`, `citas`).
+2. La base de datos es compartida tanto por el módulo Web Java como por el servicio API REST.
 
-1. Ingrese al directorio del front-end:
+### 2. Servicio Web REST (`/servicio-auth-api`) — Puerto 8081
+1. Ingrese a la carpeta del servicio:
    ```bash
-   cd frontend
+   cd servicio-auth-api
    ```
-2. Instale dependencias con Node.js 20+:
+2. Ejecute las pruebas unitarias:
    ```bash
-   npm install
+   mvn test
    ```
-3. Inicie el servidor de desarrollo en tiempo real:
+3. Inicie el servidor embebido Spring Boot:
    ```bash
-   npm run dev
+   mvn spring-boot:run
    ```
-4. Ingrese a la dirección local reportada (por defecto `http://localhost:5173`).
+   El API queda disponible en `http://localhost:8081`. Endpoints disponibles en `servicio-auth-api/README.md`.
 
-Para compilar el módulo para producción:
-```bash
-npm run build
-```
-
-### 2. Ejecución del Back-end Java Web (Servlets + Tomcat + MySQL)
-
-1. Crear la base de datos ejecutando el script `src/main/resources/db/init.sql` en MySQL.
-2. Compilar con Apache Maven:
+### 3. Módulo Web Principal (Java Web MVC / Tomcat) — Puerto 8080
+1. Compilar el WAR con Maven:
    ```bash
    mvn clean package
    ```
-3. Desplegar el archivo `target/barberia-harry-estilos.war` en Apache Tomcat 10.1+ o ejecutar mediante `INICIAR_PROYECTO.bat`.
-4. Consultar `MANUAL_DE_USUARIO_Y_DESPLIEGUE.md` para detalles específicos de configuración de puertos y credenciales.
+2. Desplegar el archivo `target/barberia-harry-estilos.war` en Apache Tomcat 10.1+ o usar el asistente `INICIAR_PROYECTO.bat`.
+3. Disponible en `http://localhost:8080/barberia-harry-estilos`.
+
+### 4. Front-end React SPA (`/frontend`) — Puerto 5173
+1. Ingrese a la carpeta `frontend`:
+   ```bash
+   cd frontend
+   ```
+2. Instale dependencias e inicie el entorno de desarrollo:
+   ```bash
+   npm install
+   npm run dev
+   ```
 
 ---
 
 ## 📋 Evidencias del Proyecto Formativo en este Repositorio
 
-| Código de Evidencia | Nombre de la Actividad | Componente |
-| :--- | :--- | :---: |
-| **GA7-220501096-AA2-EV01** | Codificación de módulos del software (Backend) | Java Web MVC / Servlets |
-| **GA7-220501096-AA2-EV02** | Informe técnico de plan de trabajo y pruebas | Manual y Pruebas Unitarias |
-| **GA7-220501096-AA4-EV02** | Definición de componentes front-end | Arquitectura de Componentes |
-| **GA7-220501096-AA4-EV03** | Componente front-end del proyecto formativo y proyectos de clase | **Módulo React en `/frontend`** |
+| Código de Evidencia | Nombre de la Actividad | Componente / Entregables |
+| :--- | :--- | :--- |
+| **GA7-220501096-AA2-EV01** | Codificación de módulos del software | Java Web MVC / Servlets Jakarta EE en Tomcat |
+| **GA7-220501096-AA2-EV02** | Informe técnico de plan de trabajo y pruebas | Manual técnico y pruebas unitarias de software |
+| **GA7-220501096-AA4-EV02** | Definición de componentes front-end | Arquitectura de componentes de interfaz |
+| **GA7-220501096-AA4-EV03** | Componente front-end del proyecto formativo | Módulo SPA interactivo en `/frontend` (React + Vite) |
+| **GA7-220501096-AA5-EV01** | Servicio web REST de autenticación | API REST Spring Boot (`/api/usuario/login`, `/registro`) |
+| **GA7-220501096-AA5-EV02** | Testing de servicio de autenticación con Postman | Colección Postman, reporte de pruebas y video demostrativo |
+| **GA7-220501096-AA5-EV03** | Diseño y desarrollo de servicios web - proyecto | CRUD REST completo (`/api/citas`, `/api/barberos`, `/api/servicios`) |
+| **GA7-220501096-AA5-EV04** | API del proyecto | Testing integral con Postman, informe técnico y video demostrativo |
+| **GA8-220501096-AA1-EV01** | Diseño de integración de módulos web y API | Diagramas UML de paquetes, componentes y clases (SVG / PNG) |
+| **GA8-220501096-AA1-EV02** | Módulos integrados y manual técnico | Configuración JDBC compartida, ejecutables y verificación cruzada |
 
 ---
 
-## 👨‍💻 Autor
-**Diego Fernando Caicedo Saldarriaga**  
-Aprendiz ADSO — Centro de Formación SENA  
-GitHub: [@dfcaicedosaldarriaga-cmd](https://github.com/dfcaicedosaldarriaga-cmd)
+## 👥 Equipo de Desarrollo
+
+**Programa:** Análisis y Desarrollo de Software (ADSO)  
+**Ficha:** 3336210  
+**Centro de Formación:** Centro de Teleinformática y Producción Industrial (CTPI) — Regional Cauca  
+**Instructora:** Verónica María Muñoz  
+
+- **Diego Fernando Caicedo Saldarriaga** — [GitHub: @dfcaicedosaldarriaga-cmd](https://github.com/dfcaicedosaldarriaga-cmd)
+- **Hernán Salazar Ospina**
+- **José Arteta Angulo**

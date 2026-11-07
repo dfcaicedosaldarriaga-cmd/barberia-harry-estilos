@@ -1,0 +1,23 @@
+EVIDENCIA: GA8-220501096-AA1-EV01
+ACTIVIDAD: Pruebas de integración de software
+PROYECTO FORMATIVO: Barbería Harry Estilos - diseño de integración web/API
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
+APRENDICES: Hernán Salazar Ospina, Diego Caicedo Saldarriaga, José Arteta Angulo
+FICHA: 3336210
+
+URL DEL REPOSITORIO OFICIAL DEL PROYECTO:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+
+CONTENIDO DE ESTA EVIDENCIA:
+Documento de diseño de integración (GA8-220501096-AA1-EV01_Diseno_Integracion.docx)
+con 3 diagramas (paquetes, clases, componentes), construidos a partir del
+código fuente real del repositorio (no de un modelo aparte). Los
+diagramas también se incluyen como archivos fuente SVG y como PNG en la
+carpeta diagramas/.
+
+NOTA SOBRE LOS DIAGRAMAS:
+Los tres diagramas reflejan el código tal como está hoy en el
+repositorio: Cita.fecha y Cita.hora son texto (String), Cliente solo
+tiene id y nombre, Servicio.precio y duracionMinutos son enteros, y no
+existe ninguna clase ni método que valide cruces de horario entre citas
+de un mismo barbero.

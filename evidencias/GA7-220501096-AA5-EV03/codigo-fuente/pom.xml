@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.4</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.harryestilos</groupId>
+    <artifactId>servicio-auth-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Servicio web REST de autenticacion - Barberia Harry Estilos</name>
+    <description>
+        Evidencia GA7-220501096-AA5-EV01. Modulo Spring Boot independiente
+        que expone como API REST el mismo modulo de inicio de sesion y
+        registro del proyecto formativo (GA7-220501096-AA3-EV01/EV02),
+        reutilizando sus clases UsuarioDAO/Usuario/PasswordUtil y la misma
+        base de datos MySQL "barberia_harry_estilos". Se mantiene como
+        modulo aparte del WAR JSP/Servlet principal para no modificar ese
+        despliegue ya funcionando.
+    </description>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- MySQL Connector/J: misma version usada en el proyecto principal,
+             para conectarse a la misma base de datos "barberia_harry_estilos"
+             y la misma tabla "usuarios". -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

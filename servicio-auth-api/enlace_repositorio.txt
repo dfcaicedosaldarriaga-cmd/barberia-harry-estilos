@@ -2,7 +2,7 @@ EVIDENCIA: GA7-220501096-AA5-EV01
 ACTIVIDAD: Diseño y desarrollo de servicios web - caso
 PROYECTO FORMATIVO: Barbería Harry Estilos - Servicio web de autenticación
 PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
-APRENDIZ: Hernán Salazar Ospina
+APRENDICES: Hernán Salazar Ospina, Diego Caicedo Saldarriaga, José Arteta Angulo
 
 PERFIL DE GITHUB (repositorio compartido del equipo):
 https://github.com/dfcaicedosaldarriaga-cmd

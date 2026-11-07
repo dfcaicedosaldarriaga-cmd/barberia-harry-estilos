@@ -1,7 +1,7 @@
-# Servicio web REST de autenticación — GA7-220501096-AA5-EV01
+# Servicio web REST — GA7-220501096-AA5-EV01/EV03
 
 Aprendiz: Hernán Salazar Ospina
-Proyecto formativo: Barbería Harry Estilos — módulo de sesión (continuación de GA7-220501096-AA3-EV01/EV02)
+Proyecto formativo: Barbería Harry Estilos — módulo de sesión (EV01) y CRUD de citas (EV03)
 
 ## Qué es esto
 
@@ -50,6 +50,43 @@ Respuestas:
 - `201 Created` — `Usuario registrado correctamente.`
 - `400 Bad Request` — datos incompletos o inválidos.
 - `409 Conflict` — `Ya existe una cuenta registrada con ese correo.`
+
+### CRUD de citas y catálogos (GA7-220501096-AA5-EV03)
+
+Reutiliza `CitaDAO`, `BarberoDAO`, `ServicioDAO` y `ClienteDAO` del
+proyecto principal (copiadas igual que `UsuarioDAO`, ver la nota en cada
+clase). No se agregó validación de cruce de horarios: esa regla no existe
+en el código fuente del proyecto principal (ni en `CitaDAO` ni en
+`AgendamientoServlet`), así que esta API tampoco la inventa, para que el
+comportamiento sea el mismo por los dos canales.
+
+#### GET /api/barberos
+Lista de barberos. `200 OK`.
+
+#### GET /api/servicios
+Lista de servicios. `200 OK`.
+
+#### GET /api/servicios/{id}
+Un servicio por id. `200 OK` / `404 Not Found`.
+
+#### POST /api/citas
+Parámetros (`x-www-form-urlencoded`): `cliente`, `barbero_id`,
+`servicio_id`, `fecha` (AAAA-MM-DD), `hora` (HH:mm).
+Respuestas: `201 Created` con la cita creada / `400 Bad Request` si falta
+algún dato o el `servicio_id` no existe.
+
+#### GET /api/citas
+Lista de todas las citas. `200 OK`.
+
+#### GET /api/citas/{id}
+Una cita por id. `200 OK` / `404 Not Found`.
+
+#### PUT /api/citas/{id}
+Mismos parámetros que POST. `200 OK` con la cita actualizada / `400` /
+`404` si el id no existe.
+
+#### DELETE /api/citas/{id}
+`200 OK` / `404 Not Found`.
 
 ## Ejecución local
 

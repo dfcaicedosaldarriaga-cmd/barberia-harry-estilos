@@ -1,0 +1,20 @@
+EVIDENCIA: GA8-220501096-AA1-EV02
+ACTIVIDAD: Pruebas de integración de software
+PROYECTO FORMATIVO: Barbería Harry Estilos - módulos integrados y manual técnico
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
+APRENDICES: Hernán Salazar Ospina, Diego Caicedo Saldarriaga, José Arteta Angulo
+FICHA: 3336210
+
+URL DEL REPOSITORIO OFICIAL DEL PROYECTO:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+
+CONTENIDO DE ESTA EVIDENCIA:
+Documento de empaquetado, configuración JDBC y verificación cruzada
+(GA8-220501096-AA1-EV02_Modulos_Integrados.docx), construido a partir
+de la configuración real del repositorio (clase ConexionDB de ambos
+módulos, application.properties de servicio-auth-api).
+
+ESTADO: completo. Las 3 capturas (generación de ejecutables, configuración
+JDBC abierta en NetBeans, y la verificación cruzada entre el módulo web
+y el módulo API) se tomaron ejecutando el proyecto localmente y están
+incluidas en la carpeta capturas/.

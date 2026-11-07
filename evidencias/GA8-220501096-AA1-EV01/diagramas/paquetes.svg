@@ -1,0 +1,85 @@
+<svg viewBox="0 0 980 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de paquetes: dos despliegues independientes, WAR en el puerto 8080 y Spring Boot en el puerto 8081, cada uno con sus propios paquetes model/dao/presentacion, apuntando a la misma base de datos MySQL. Las clases de dao y model de servicio-auth-api son copias literales de las del proyecto principal.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: currentColor; }
+    .pkgbox { fill: none; stroke: currentColor; stroke-width: 1.6; }
+    .tab { fill: none; stroke: currentColor; stroke-width: 1.6; }
+    .title { font-size: 15px; font-weight: 700; }
+    .pkgname { font-size: 13px; font-weight: 700; }
+    .cls { font-size: 11.5px; }
+    .lbl { font-size: 11px; }
+    .unit { fill: none; stroke: currentColor; stroke-width: 2; stroke-dasharray: 6 4; }
+  </style>
+
+  <text x="490" y="28" text-anchor="middle" class="title">Barberia Harry Estilos - diagrama de paquetes</text>
+
+  <!-- WAR unit -->
+  <rect class="unit" x="40" y="55" width="400" height="430" rx="6"/>
+  <text x="240" y="80" text-anchor="middle" class="pkgname">barberia-harry-estilos (WAR, Tomcat, puerto 8080)</text>
+
+  <!-- presentacion package -->
+  <path class="tab" d="M70,100 h110 v14 h18 v10 h-128 z"/>
+  <rect class="pkgbox" x="70" y="124" width="340" height="80"/>
+  <text x="80" y="110" class="pkgname">webapp (JSP)</text>
+  <text x="80" y="142" class="cls">index, agendamiento, citas,</text>
+  <text x="80" y="158" class="cls">editar-cita, confirmacion, servicios</text>
+
+  <!-- servlet package -->
+  <path class="tab" d="M70,222 h110 v14 h18 v10 h-128 z"/>
+  <rect class="pkgbox" x="70" y="246" width="340" height="90"/>
+  <text x="80" y="232" class="pkgname">servlet</text>
+  <text x="80" y="264" class="cls">AgendamientoServlet, CitasServlet,</text>
+  <text x="80" y="280" class="cls">EliminarCitaServlet, InicioServlet,</text>
+  <text x="80" y="296" class="cls">ServiciosServlet</text>
+
+  <!-- dao/model package -->
+  <path class="tab" d="M70,354 h110 v14 h18 v10 h-128 z"/>
+  <rect class="pkgbox" x="70" y="378" width="340" height="90"/>
+  <text x="80" y="364" class="pkgname">dao / model</text>
+  <text x="80" y="398" class="cls">CitaDAO, BarberoDAO, ServicioDAO,</text>
+  <text x="80" y="414" class="cls">ClienteDAO, ConexionDB</text>
+  <text x="80" y="432" class="cls">Cita, Barbero, Servicio, Cliente</text>
+
+  <!-- Spring Boot unit -->
+  <rect class="unit" x="540" y="55" width="400" height="430" rx="6"/>
+  <text x="740" y="80" text-anchor="middle" class="pkgname">servicio-auth-api (Spring Boot, puerto 8081)</text>
+
+  <!-- api package -->
+  <path class="tab" d="M570,100 h110 v14 h18 v10 h-128 z"/>
+  <rect class="pkgbox" x="570" y="124" width="340" height="90"/>
+  <text x="580" y="110" class="pkgname">api (controladores REST)</text>
+  <text x="580" y="142" class="cls">UsuarioController</text>
+  <text x="580" y="158" class="cls">CitaController, BarberoController,</text>
+  <text x="580" y="174" class="cls">ServicioController</text>
+
+  <!-- dao/model copia -->
+  <path class="tab" d="M570,246 h110 v14 h18 v10 h-128 z"/>
+  <rect class="pkgbox" x="570" y="270" width="340" height="110"/>
+  <text x="580" y="256" class="pkgname">dao / model (copia documentada)</text>
+  <text x="580" y="300" class="cls">UsuarioDAO, CitaDAO, BarberoDAO,</text>
+  <text x="580" y="316" class="cls">ServicioDAO, ClienteDAO, ConexionDB</text>
+  <text x="580" y="332" class="cls">Usuario, Cita, Barbero, Servicio, Cliente</text>
+  <text x="580" y="352" class="lbl" font-style="italic">(copia literal de las clases del WAR,</text>
+  <text x="580" y="366" class="lbl" font-style="italic">ver nota Javadoc en cada archivo)</text>
+
+  <!-- util -->
+  <path class="tab" d="M570,398 h110 v14 h18 v10 h-128 z"/>
+  <rect class="pkgbox" x="570" y="422" width="340" height="46"/>
+  <text x="580" y="408" class="pkgname">util</text>
+  <text x="580" y="450" class="cls">PasswordUtil, RegistroValidator</text>
+
+  <!-- MySQL -->
+  <rect x="340" y="540" width="300" height="60" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="490" y="565" text-anchor="middle" class="pkgname">MySQL: barberia_harry_estilos</text>
+  <text x="490" y="583" text-anchor="middle" class="lbl">tablas: barberos, servicios, clientes, citas</text>
+
+  <!-- arrows -->
+  <line x1="240" y1="468" x2="406" y2="540" class="pkgbox" marker-end="url(#arrow)"/>
+  <line x1="740" y1="468" x2="574" y2="540" class="pkgbox" marker-end="url(#arrow)"/>
+  <text x="330" y="520" class="lbl">lee/escribe</text>
+  <text x="620" y="520" class="lbl">lee/escribe</text>
+</svg>

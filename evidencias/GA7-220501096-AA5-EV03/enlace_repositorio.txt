@@ -1,0 +1,42 @@
+EVIDENCIA: GA7-220501096-AA5-EV03
+ACTIVIDAD: Diseño y desarrollo de servicios web - proyecto
+PROYECTO FORMATIVO: Barbería Harry Estilos - CRUD de citas expuesto como API REST
+PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
+APRENDICES: Hernán Salazar Ospina, Diego Caicedo Saldarriaga, José Arteta Angulo
+FICHA: 3336210
+
+PERFIL DE GITHUB (repositorio compartido del equipo):
+https://github.com/dfcaicedosaldarriaga-cmd
+Nota: el equipo trabaja sobre un único repositorio compartido (cuenta de
+Diego Fernando Caicedo Saldarriaga), igual que en las evidencias
+anteriores; no se crearon repositorios individuales por aprendiz.
+
+URL DEL REPOSITORIO OFICIAL DEL PROYECTO:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+
+UBICACIÓN DE ESTE MÓDULO EN EL REPOSITORIO:
+Carpeta "servicio-auth-api" en la raíz del repositorio, la misma carpeta
+Maven Spring Boot creada en la EV01. Esta evidencia agrega tres
+controladores nuevos (BarberoController, ServicioController,
+CitaController) al mismo módulo, sin crear un proyecto aparte.
+
+RELACIÓN CON EL PROYECTO PRINCIPAL:
+Reutiliza literalmente las clases Cita, Barbero, Servicio, Cliente
+(paquete model) y CitaDAO, BarberoDAO, ServicioDAO, ClienteDAO (paquete
+dao) del módulo web principal (WAR JSP/Servlet), siguiendo el mismo
+patrón de copia documentada que ya se usó en la EV01 con UsuarioDAO.
+Opera sobre la misma base de datos MySQL "barberia_harry_estilos", sin
+cambios de esquema.
+
+HALLAZGO DOCUMENTADO EN ESTA EVIDENCIA:
+El CitaDAO del proyecto principal no valida cruces de horario entre
+citas de un mismo barbero (no existe esa regla en el código fuente del
+repositorio, ni en el DAO ni en los servlets). Esta API REST no agrega
+esa validación, para que el comportamiento sea el mismo por los dos
+canales (web y API). El detalle está documentado en el apartado
+"Análisis de la evidencia" del documento de diseño adjunto.
+
+ESTADO DE VERSIONAMIENTO:
+Código desarrollado en Java 17 + Spring Boot 3.3.4, debidamente
+versionado, comentado, y publicado en la rama 'main' del repositorio
+remoto compartido del equipo.
