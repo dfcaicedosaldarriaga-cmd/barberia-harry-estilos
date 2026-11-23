@@ -1,0 +1,40 @@
+===============================================================================
+SENA - CENTRO DE TELEINFORMÁTICA Y PRODUCCIÓN INDUSTRIAL (CTPI) - REGIONAL CAUCA
+PROGRAMA DE FORMACIÓN: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSO)
+FICHA TÉCNICA: 3336210 - 3336209
+FASE DEL PROYECTO: EJECUCIÓN (AP7)
+ACTIVIDAD DE APRENDIZAJE: GA9-220501096-AA2
+EVIDENCIA: GA9-220501096-AA2-EV01 - DISEÑA CASOS Y DEFINE EL AMBIENTE DE PRUEBAS DE SOFTWARE SEGÚN PROYECTO
+===============================================================================
+
+PROYECTO FORMATIVO:
+Barbería Harry Estilos — Sistema Web de Gestión y Agendamiento
+
+INSTRUCTORA ASIGNADA:
+Verónica M. Muñoz
+
+INTEGRANTES / EQUIPO DE DESARROLLO (QA):
+1. Diego Fernando Caicedo Saldarriaga
+2. Hernán Salazar Ospina
+3. José Arteta Angulo
+
+-------------------------------------------------------------------------------
+ENLACE DEL REPOSITORIO OFICIAL EN GITHUB:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+-------------------------------------------------------------------------------
+
+UBICACIÓN DE LA EVIDENCIA EN EL REPOSITORIO:
+evidencias/GA9-220501096-AA2-EV01/
+
+PRODUCTO ENTREGADO:
+1. GA9-220501096-AA2-EV01_Casos_y_Ambiente_de_Pruebas.xlsx
+   Libro de trabajo en formato Excel (.xlsx) estructurado en 5 hojas normalizadas:
+   - Instrucciones: Identificación formal del proyecto, integrantes, instructora, alcance y notas metodológicas.
+   - Requerimientos: 13 requerimientos del sistema (10 Funcionales RF-01 a RF-10 y 3 No Funcionales RNF-01 a RNF-03).
+   - Casos de prueba: Matriz de 21 casos de prueba reales con los 15 campos obligatorios exigidos por la guía GFPI-F-135 V02.
+   - Ambiente de pruebas: Definición técnica de los 3 entornos de ejecución (AMB-01 API REST Spring Boot en puerto 8081, AMB-02 Web MVC Tomcat en puerto 8080, AMB-03 Frontend React SPA en puerto 5173).
+   - Resumen: Tablero de métricas automatizado con fórmulas de Excel (=COUNTIF, =SUM, =IF) con porcentajes de aprobación y distribución de severidad.
+
+2. enlace_repositorio.txt
+   Ficha técnica de entrega y verificación de la evidencia.
+===============================================================================

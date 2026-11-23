@@ -51,7 +51,8 @@ barberia-harry-estilos/
 │   ├── GA7-220501096-AA5-EV03/          # Diseño y desarrollo servicios web CRUD (código + informe)
 │   ├── GA7-220501096-AA5-EV04/          # API del proyecto (Colección Postman, reporte y video demostrativo)
 │   ├── GA8-220501096-AA1-EV01/          # Diseño de integración de módulos web y API (Diagramas UML SVG/PNG)
-│   └── GA8-220501096-AA1-EV02/          # Módulos integrados y manual técnico (JDBC, ejecutables y pruebas)
+│   ├── GA8-220501096-AA1-EV02/          # Módulos integrados y manual técnico (JDBC, ejecutables y pruebas)
+│   └── GA9-220501096-AA2-EV01/          # Casos y ambiente de pruebas de software (Excel oficial con 21 casos)
 │
 ├── 📄 pom.xml                           # Descriptor Maven principal (WAR Java Web)
 ├── 📄 INICIAR_PROYECTO.bat              # Script de arranque rápido (Windows)
@@ -116,15 +117,16 @@ barberia-harry-estilos/
 | **GA7-220501096-AA5-EV04** | API del proyecto | Testing integral con Postman, informe técnico y video demostrativo |
 | **GA8-220501096-AA1-EV01** | Diseño de integración de módulos web y API | Diagramas UML de paquetes, componentes y clases (SVG / PNG) |
 | **GA8-220501096-AA1-EV02** | Módulos integrados y manual técnico | Configuración JDBC compartida, ejecutables y verificación cruzada |
+| **GA9-220501096-AA2-EV01** | Diseña casos y define el ambiente de pruebas de software según proyecto | Formato Excel oficial normalizado con 21 casos de prueba, ambientes y resumen |
 
 ---
 
 ## 👥 Equipo de Desarrollo
 
 **Programa:** Análisis y Desarrollo de Software (ADSO)  
-**Ficha:** 3336210-3336209  
+**Ficha:** 3336210 - 3336209
 **Centro de Formación:** Centro de Teleinformática y Producción Industrial (CTPI) — Regional Cauca  
-**Instructora:** Verónica María Muñoz  
+**Instructora:** Verónica M. Muñoz  
 
 - **Diego Fernando Caicedo Saldarriaga** — [GitHub: @dfcaicedosaldarriaga-cmd](https://github.com/dfcaicedosaldarriaga-cmd)
 - **Hernán Salazar Ospina**
