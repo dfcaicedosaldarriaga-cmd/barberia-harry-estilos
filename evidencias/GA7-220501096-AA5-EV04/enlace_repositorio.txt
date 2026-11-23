@@ -1,12 +1,15 @@
+===============================================================================
+SERVICIO NACIONAL DE APRENDIZAJE — SENA
+PROGRAMA DE FORMACIÓN: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSI / ADSO)
+FICHA TÉCNICA: 3336210 - 3336209
+FASE DEL PROYECTO: EJECUCIÓN (AP7)
 EVIDENCIA: GA7-220501096-AA5-EV04
-ACTIVIDAD: API del proyecto
-PROYECTO FORMATIVO: Barbería Harry Estilos - Pruebas con Postman del CRUD de citas
-PROGRAMA: Análisis y Desarrollo de Software (ADSO) - SENA
-APRENDICES: Hernán Salazar Ospina, Diego Caicedo Saldarriaga, José Arteta Angulo
-FICHA: 3336210
-
-URL DEL REPOSITORIO OFICIAL DEL PROYECTO:
+PROYECTO FORMATIVO: Barbería Harry Estilos — Sistema Web de Gestión y Agendamiento
+INSTRUCTORA ASIGNADA: Verónica M. Muñoz
+EQUIPO DE APRENDICES (QA):
+- Diego Fernando Caicedo Saldarriaga
+- Hernán Salazar Ospina
+- José Arteta Angulo
+ENLACE DEL REPOSITORIO GITHUB:
 https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
-
-VIDEO DEMOSTRATIVO EN YOUTUBE:
-https://youtu.be/qlTqLFIRvlE
+===============================================================================

@@ -1,8 +1,15 @@
 ===============================================================================
-SENA - CTPI REGIONAL CAUCA - PROGRAMA ADSO (FICHAS 3336210 - 3336209)
+SERVICIO NACIONAL DE APRENDIZAJE — SENA
+PROGRAMA DE FORMACIÓN: ANÁLISIS Y DESARROLLO DE SOFTWARE (ADSI / ADSO)
+FICHA TÉCNICA: 3336210 - 3336209
+FASE DEL PROYECTO: EJECUCIÓN (AP7)
 EVIDENCIA: GA9-220501096-AA1-EV01
-PROYECTO FORMATIVO: Barberia Harry Estilos
-INSTRUCTORA: Veronica M. Munoz
-APRENDICES: Diego Fernando Caicedo S., Hernan Salazar O., Jose Arteta A.
-REPOSITORIO: https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
+PROYECTO FORMATIVO: Barbería Harry Estilos — Sistema Web de Gestión y Agendamiento
+INSTRUCTORA ASIGNADA: Verónica M. Muñoz
+EQUIPO DE APRENDICES (QA):
+- Diego Fernando Caicedo Saldarriaga
+- Hernán Salazar Ospina
+- José Arteta Angulo
+ENLACE DEL REPOSITORIO GITHUB:
+https://github.com/dfcaicedosaldarriaga-cmd/barberia-harry-estilos
 ===============================================================================

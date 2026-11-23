@@ -7,7 +7,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Postman](https://img.shields.io/badge/Postman-Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
 
-Repositorio oficial del proyecto formativo desarrollado para el programa de formación **Análisis y Desarrollo de Software (ADSO) — SENA (Ficha 3336210)**, Centro de Teleinformática y Producción Industrial (CTPI), Regional Cauca.
+Repositorio oficial del proyecto formativo desarrollado para el programa de formación **Análisis y Desarrollo de Software (ADSI / ADSO) — SENA (Fichas 3336210 - 3336209)**.
 
 ---
 
@@ -133,7 +133,7 @@ barberia-harry-estilos/
 
 **Programa:** Análisis y Desarrollo de Software (ADSO)  
 **Ficha:** 3336210 - 3336209
-**Centro de Formación:** Centro de Teleinformática y Producción Industrial (CTPI) — Regional Cauca  
+**Institución:** Servicio Nacional de Aprendizaje (SENA)  
 **Instructora:** Verónica M. Muñoz  
 
 - **Diego Fernando Caicedo Saldarriaga** — [GitHub: @dfcaicedosaldarriaga-cmd](https://github.com/dfcaicedosaldarriaga-cmd)
