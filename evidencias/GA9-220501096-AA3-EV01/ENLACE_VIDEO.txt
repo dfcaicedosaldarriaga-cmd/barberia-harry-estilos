@@ -1,0 +1,11 @@
+EVIDENCIA: GA9-220501096-AA3-EV01 - Documenta pruebas de software
+PROYECTO FORMATIVO: Barbería Harry Estilos
+APRENDICES: Diego Fernando Caicedo Saldarriaga, Hernán Salazar Ospina, José Arteta Angulo
+INSTRUCTORA: Verónica M. Muñoz
+FICHA: 3336210 - 3336209
+
+ENLACE YOUTUBE DEL VIDEO DEMOSTRATIVO:
+https://youtu.be/qlTqLFIRvlE
+
+ARCHIVO LOCAL INCLUIDO EN ESTA CARPETA:
+GA9-220501096-AA3-EV01_Video_Demostrativo.mp4

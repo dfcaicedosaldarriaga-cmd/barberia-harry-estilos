@@ -52,7 +52,11 @@ barberia-harry-estilos/
 │   ├── GA7-220501096-AA5-EV04/          # API del proyecto (Colección Postman, reporte y video demostrativo)
 │   ├── GA8-220501096-AA1-EV01/          # Diseño de integración de módulos web y API (Diagramas UML SVG/PNG)
 │   ├── GA8-220501096-AA1-EV02/          # Módulos integrados y manual técnico (JDBC, ejecutables y pruebas)
-│   └── GA9-220501096-AA2-EV01/          # Casos y ambiente de pruebas de software (Excel oficial con 21 casos)
+│   ├── GA9-220501096-AA1-EV01/          # Taller sobre codificación de módulos del software (DOCX / PDF)
+│   ├── GA9-220501096-AA1-EV02/          # Realiza plan pruebas de software (DOCX / PDF)
+│   ├── GA9-220501096-AA2-EV01/          # Casos y ambiente de pruebas de software (Excel oficial con 21 casos)
+│   ├── GA9-220501096-AA3-EV01/          # Documentación de pruebas y video demostrativo (DOCX / PDF)
+│   └── GA9-220501096-AA3-EV02/          # Reporte de plan de pruebas ejecutadas (DOCX / PDF)
 │
 ├── 📄 pom.xml                           # Descriptor Maven principal (WAR Java Web)
 ├── 📄 INICIAR_PROYECTO.bat              # Script de arranque rápido (Windows)
@@ -117,7 +121,11 @@ barberia-harry-estilos/
 | **GA7-220501096-AA5-EV04** | API del proyecto | Testing integral con Postman, informe técnico y video demostrativo |
 | **GA8-220501096-AA1-EV01** | Diseño de integración de módulos web y API | Diagramas UML de paquetes, componentes y clases (SVG / PNG) |
 | **GA8-220501096-AA1-EV02** | Módulos integrados y manual técnico | Configuración JDBC compartida, ejecutables y verificación cruzada |
-| **GA9-220501096-AA2-EV01** | Diseña casos y define el ambiente de pruebas de software según proyecto | Formato Excel oficial normalizado con 21 casos de prueba, ambientes y resumen |
+| **GA9-220501096-AA1-EV01** | Taller sobre codificación de módulos del software | Taller técnico sobre testing, JUnit 5, Postman y capturas |
+| **GA9-220501096-AA1-EV02** | Realiza plan pruebas de software | Plan maestro de pruebas (alcance, criterios, entornos, riesgos) |
+| **GA9-220501096-AA2-EV01** | Diseña casos y define el ambiente de pruebas según proyecto | Formato Excel oficial con 21 casos de prueba, ambientes y resumen |
+| **GA9-220501096-AA3-EV01** | Documenta pruebas de software, de acuerdo a la planificación | Formatos de seguimiento diligenciados, capturas y video demostrativo |
+| **GA9-220501096-AA3-EV02** | Reporte de plan de pruebas ejecutadas | Consolidado final de métricas, análisis de defectos y acciones correctivas |
 
 ---
 
